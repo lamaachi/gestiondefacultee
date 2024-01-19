@@ -7,7 +7,7 @@ import java.sql.SQLException;
 
 public class JDBC_Connexion {
 	private static final String DRIVER = "com.mysql.cj.jdbc.Driver";
-	private static final String LOCAL = "jdbc:mysql://localhost:3306/dbfacucd";
+	private static final String LOCAL = "jdbc:mysql://localhost:3307/dbfacsucd";
 	private static final String USER = "root";
 	private static final String PASSWD = "";
 	public static Connection jdbc_con = null;

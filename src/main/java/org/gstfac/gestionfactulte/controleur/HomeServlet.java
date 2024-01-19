@@ -25,7 +25,7 @@ public class HomeServlet extends HttpServlet {
 
 
         // Forward the request to the Success.jsp
-        RequestDispatcher dispatcher = req.getRequestDispatcher("/layout.jsp");
+        RequestDispatcher dispatcher = req.getRequestDispatcher("/home.jsp");
         dispatcher.forward(req, resp);
     }
 

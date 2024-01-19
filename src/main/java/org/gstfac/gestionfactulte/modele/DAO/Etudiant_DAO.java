@@ -6,9 +6,10 @@ import java.util.ArrayList;
 
 public interface Etudiant_DAO {
 	ArrayList<Etudiant>  findAll();
-	Etudiant findByCNE(String CNE);
-	void insert(Etudiant etd);
-	void update(Etudiant etd, String CNE);
-	void deleteByCNE(String CNE);
+	void insertEtd(Etudiant etd);
+	void update(Etudiant etd, int ID_Etudiant);
+	void deleteByID(int ID_Etudiant);
+	Etudiant findByCode(String code);
+	Etudiant findByID(int ID_Etudiant);
 }
 

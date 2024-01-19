@@ -14,8 +14,8 @@
         <%@ include file="./Template/Header.jsp" %>
         <!-- Container fluid -->
         <div class="container-fluid px-6 py-4">
-           <%-- ohter pages her--%>
             <!-- Dynamic content placeholder -->
+
         </div>
     </div>
 </div>

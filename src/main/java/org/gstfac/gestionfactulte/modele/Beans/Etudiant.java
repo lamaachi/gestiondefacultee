@@ -5,14 +5,29 @@ public class Etudiant {
 	private String nom;
 	private String prenom;
 	private String CNE;
+	private String code;
 	private String situationScolaire;
+	private String email; // Ajout de l'attribut email
+	private int ID_Etudiant;
 
+	public int getId_Etudiant() {
+		return ID_Etudiant;
+	}
+	public void setId_Etudiant(int id) {
+		this.ID_Etudiant = id;
+	}
 	public String getCNE() {
 		return CNE;
 	}
+	public void setCNE(String cne) {
+		this.CNE = cne;
+	}
 
-	public void setCNE(String codeEtudiant) {
-		this.CNE = codeEtudiant;
+	public String getCode() {
+		return code;
+	}
+	public void setCode(String code) {
+		this.code = code;
 	}
 
 	public String getSituationScolaire() {
@@ -22,8 +37,6 @@ public class Etudiant {
 	public void setSituationScolaire(String situationScolaire) {
 		this.situationScolaire = situationScolaire;
 	}
-
-	public Etudiant() {	}
 
 	public String getNom() {
 		return nom;
@@ -41,9 +54,12 @@ public class Etudiant {
 		this.prenom = prenom;
 	}
 
-	@Override
-	public String toString() {
-		return "Etudiant [nom:" + nom + ", prenom:" + prenom + ", CNE:" + CNE + "]";
+	public String getEmail() {
+		return email;
 	}
-	
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
 }

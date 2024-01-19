@@ -40,7 +40,7 @@ public class LoginServlet extends HttpServlet {
         if(personnelAuth!=null){
             req.setAttribute("personnelAuth",personnelAuth);
             // Forward the request to the Success.jsp
-            RequestDispatcher dispatcher = req.getRequestDispatcher("/Template/Success.jsp");
+            RequestDispatcher dispatcher = req.getRequestDispatcher("/layout.jsp");
             dispatcher.forward(req, resp);
         }else{
             // Authentication failed, you can redirect to a login page with an error message
