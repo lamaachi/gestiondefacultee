@@ -1,18 +1,27 @@
 package org.gstfac.gestionfactulte.modele.Beans;
 
+import jakarta.persistence.*;
+
+@Entity
+@Table(name = "personnel")
 public class Personnel {
-    public int ID_Personnel;
-    public String nom;
-    public String prenom;
-    public String fonction;
-    public String identifiant;
-    public String email;
-    public String password;
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int ID_Personnel;
+
+    private String nom;
+    private String prenom;
+    private String fonction;
+    private String identifiant;
+    private String email;
+    private String password;
 
     // Constructors
     public Personnel() {
     }
 
+    // Getters and Setters
     public int getID_Personnel() {
         return ID_Personnel;
     }

@@ -3,12 +3,13 @@ package org.gstfac.gestionfactulte.modele.DAO;
 import org.gstfac.gestionfactulte.modele.Beans.Etudiant;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public interface Etudiant_DAO {
-	ArrayList<Etudiant>  findAll();
-	Etudiant findByCNE(String CNE);
-	void insert(Etudiant etd);
-	void update(Etudiant etd, String CNE);
+	List<Etudiant> getAll();
+	Etudiant getByCNE(String cne);
+	void save(Etudiant etd);
+	void update(Etudiant etd);
 	void deleteByCNE(String CNE);
 }
 
