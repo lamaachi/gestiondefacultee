@@ -7,28 +7,24 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import org.gstfac.gestionfactulte.modele.Beans.Personnel;
-import org.gstfac.gestionfactulte.modele.DAO.DAOImplimentation.Personnel_DAO_JDBC;
+import org.gstfac.gestionfactulte.modele.DAO.DAOImplimentation.PersonnelDaoJpaImpl;
 
 import java.io.IOException;
 
-@WebServlet(name = "login",urlPatterns = "/login")
+@WebServlet(name = "login", urlPatterns = "/login")
 public class LoginServlet extends HttpServlet {
-    Personnel_DAO_JDBC personnelDaoJdbc;
+    private PersonnelDaoJpaImpl personnelDaoJpa;
+
     @Override
     public void init() throws ServletException {
         super.init();
-        personnelDaoJdbc = new Personnel_DAO_JDBC();
-    }
-
-    @Override
-    protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        super.service(req, resp);
+        personnelDaoJpa = new PersonnelDaoJpaImpl();
     }
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         RequestDispatcher dispatcher = req.getRequestDispatcher("/");
-        dispatcher.forward(req,resp);
+        dispatcher.forward(req, resp);
     }
 
     @Override
@@ -36,16 +32,16 @@ public class LoginServlet extends HttpServlet {
         String email = req.getParameter("email");
         String password = req.getParameter("password");
 
-        Personnel personnelAuth = personnelDaoJdbc.Login(email,password);
-        if(personnelAuth!=null){
-            req.setAttribute("personnelAuth",personnelAuth);
+        Personnel personnelAuth = personnelDaoJpa.Login(email, password);
+
+        if (personnelAuth != null) {
+            req.setAttribute("personnelAuth", personnelAuth);
             // Forward the request to the Success.jsp
             RequestDispatcher dispatcher = req.getRequestDispatcher("/Template/Success.jsp");
             dispatcher.forward(req, resp);
-        }else{
+        } else {
             // Authentication failed, you can redirect to a login page with an error message
-            resp.sendRedirect("login.jsp?error=authentication_failed");
+            resp.sendRedirect("index.jsp?error=authentication_failed");
         }
     }
 }
-
