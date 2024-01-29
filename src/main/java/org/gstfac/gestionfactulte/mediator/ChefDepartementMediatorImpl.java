@@ -14,7 +14,6 @@ public class ChefDepartementMediatorImpl implements  ChefDepartementMediator{
     public void sendMessage(Message message) {
 
     }
-
     @Override
     public void addChefDepartement(ChefDepartement chefDepartement) {
 
