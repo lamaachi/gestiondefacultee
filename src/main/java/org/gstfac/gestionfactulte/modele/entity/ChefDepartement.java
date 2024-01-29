@@ -1,6 +1,5 @@
 package org.gstfac.gestionfactulte.modele.entity;
 
-import com.master.universite.mediator.ChefDepartementMediator;
 import jakarta.persistence.Entity;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Transient;
@@ -14,15 +13,11 @@ public class ChefDepartement extends Personnel {
     private List<Message> sentMessages;
 
     @Transient
-    private ChefDepartementMediator mediator;
+    private ChefDepartement mediator;
 
 
     public ChefDepartement() {
     }
-
-//    public void sendMessage(String message) {
-//        mediator.sendMessage(this, message);
-//    }
 
     public String receiveMessage(String message) {
         return message;
