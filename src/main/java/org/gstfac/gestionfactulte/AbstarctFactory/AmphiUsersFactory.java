@@ -1,7 +1,7 @@
 package org.gstfac.gestionfactulte.AbstarctFactory;
 
-import org.gstfac.gestionfactulte.modele.Beans.Etudiant;
-import org.gstfac.gestionfactulte.modele.Beans.Personnel;
+import org.gstfac.gestionfactulte.modele.entity.Etudiant;
+import org.gstfac.gestionfactulte.modele.entity.Personnel;
 
 public class AmphiUsersFactory implements IUtilisateurFactory {
 

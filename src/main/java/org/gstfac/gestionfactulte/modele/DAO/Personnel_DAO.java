@@ -1,6 +1,6 @@
 package org.gstfac.gestionfactulte.modele.DAO;
 
-import org.gstfac.gestionfactulte.modele.Beans.Personnel;
+import org.gstfac.gestionfactulte.modele.entity.Personnel;
 
 import java.util.ArrayList;
 
