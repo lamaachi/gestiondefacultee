@@ -61,5 +61,8 @@ public class Etudiant {
 	public void setEmail(String email) {
 		this.email = email;
 	}
+	public void setEmailtest(String email) {
+		this.email = email;
+	}
 
 }
