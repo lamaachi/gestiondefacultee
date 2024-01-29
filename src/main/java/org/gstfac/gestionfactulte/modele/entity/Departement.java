@@ -1,7 +1,7 @@
 package org.gstfac.gestionfactulte.modele.entity;
 
-import com.master.universite.composit.DepartmentComponent;
 import jakarta.persistence.*;
+import org.gstfac.gestionfactulte.composit.DepartmentComponent;
 
 import java.util.List;
 
@@ -56,7 +56,7 @@ public class Departement implements DepartmentComponent {
     }
 
     @Override
-    public String display() {
+    public String AfficherDepartement() {
         return this.nom;
     }
 }
