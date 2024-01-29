@@ -2,7 +2,7 @@ package org.gstfac.gestionfactulte.modele.DAO.DAOImplimentation;
 
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.Query;
-import org.gstfac.gestionfactulte.modele.Beans.Etudiant;
+import org.gstfac.gestionfactulte.modele.entity.Etudiant;
 import org.gstfac.gestionfactulte.modele.DAO.Etudiant_DAO;
 import org.gstfac.gestionfactulte.modele.DAO.JDBCSingleton;
 
@@ -42,6 +42,10 @@ public class EtudiantDaoImpl implements Etudiant_DAO {
 		entityManager.getTransaction().commit();
 	}
 
+	@Override
+	public void test() {
+
+	}
 
 
 	@Override
