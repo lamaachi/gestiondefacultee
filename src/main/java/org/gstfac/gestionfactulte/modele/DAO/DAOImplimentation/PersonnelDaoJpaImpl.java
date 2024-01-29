@@ -15,7 +15,6 @@ public class PersonnelDaoJpaImpl implements Personnel_DAO {
     public PersonnelDaoJpaImpl() {
         entityManager = JDBCSingleton.getEntityManagerFactory().createEntityManager();
     }
-
     @Override
     public Personnel Login(String ident, String Password) {
         try {
