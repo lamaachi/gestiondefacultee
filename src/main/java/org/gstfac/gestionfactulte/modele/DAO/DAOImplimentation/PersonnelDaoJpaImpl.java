@@ -3,7 +3,7 @@ package org.gstfac.gestionfactulte.modele.DAO.DAOImplimentation;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.NoResultException;
 import jakarta.persistence.Query;
-import org.gstfac.gestionfactulte.modele.Beans.Personnel;
+import org.gstfac.gestionfactulte.modele.entity.Personnel;
 import org.gstfac.gestionfactulte.modele.DAO.Personnel_DAO;
 import org.gstfac.gestionfactulte.modele.DAO.JDBCSingleton;
 

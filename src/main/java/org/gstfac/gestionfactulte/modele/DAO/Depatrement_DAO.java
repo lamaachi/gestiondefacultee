@@ -1,7 +1,7 @@
 package org.gstfac.gestionfactulte.modele.DAO;
 
-import org.gstfac.gestionfactulte.modele.Beans.Departement;
-import org.gstfac.gestionfactulte.modele.Beans.Etudiant;
+import org.gstfac.gestionfactulte.modele.entity.Departement;
+import org.gstfac.gestionfactulte.modele.entity.Etudiant;
 
 import java.util.ArrayList;
 
