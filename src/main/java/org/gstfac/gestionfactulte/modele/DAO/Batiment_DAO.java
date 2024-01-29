@@ -1,6 +1,6 @@
 package org.gstfac.gestionfactulte.modele.DAO;
 
-import org.gstfac.gestionfactulte.modele.Beans.Batiment;
+import org.gstfac.gestionfactulte.modele.entity.Batiment;
 
 import java.util.ArrayList;
 

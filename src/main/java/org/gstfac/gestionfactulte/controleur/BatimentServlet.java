@@ -1,18 +1,5 @@
 package org.gstfac.gestionfactulte.controleur;
 
-import com.master.universite.adapter.FeteAdapter;
-import com.master.universite.adapter.SoutenanceAdapter;
-import com.master.universite.dao.AmphiDao;
-import com.master.universite.dao.SalleDao;
-import com.master.universite.dao.impl.AmphiDaoImpl;
-import com.master.universite.dao.impl.SalleDaoImpl;
-import com.master.universite.entity.Amphi;
-import com.master.universite.entity.Batiment;
-import com.master.universite.entity.Salle;
-import com.master.universite.enums.Fonctionnalite;
-import com.master.universite.factory.AmphiFactory;
-import com.master.universite.factory.BatimentFactory;
-import com.master.universite.factory.SalleFactory;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
