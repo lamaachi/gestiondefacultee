@@ -11,5 +11,6 @@ public interface Etudiant_DAO {
 	void save(Etudiant etd);
 	void update(Etudiant etd);
 	void deleteByCNE(String CNE);
+	void test();
 }
 
