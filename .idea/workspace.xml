@@ -10,7 +10,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="caf390ae-914c-48cf-b5d0-54b1830224cf" name="Changes" comment="change to Jpa">
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/modele/DAO/Section_DAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/modele/DAO/Section_DAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/controleur/BatimentServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/controleur/DepartementServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/controleur/EtudiantServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/controleur/FiliereServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/controleur/MessagesServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/controleur/PersonnelServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/controleur/SectionServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/batiment.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/departement.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/etudiant.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/filiere.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/message.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/personnel.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/section.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/AbstarctFactory/AmphiUsersFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/AbstarctFactory/AmphiUsersFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/controleur/AboutServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/controleur/HomeServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/controleur/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/controleur/SaisieEtudiant.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/controleur/register.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/modele/DAO/DAOImplimentation/PersonnelDaoJpaImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/modele/DAO/DAOImplimentation/PersonnelDaoJpaImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/modele/DAO/Personnel_DAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/modele/DAO/Personnel_DAO.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,7 +107,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "Tomcat Server.Tomcat 10.1.6.executor": "Run",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "TarikLocal",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/HP/IdeaProjects/gestiondefaculte/src/main/java/org/gstfac/gestionfactulte/controleur",
@@ -279,7 +301,6 @@
       <workItem from="1706544403115" duration="2329000" />
       <workItem from="1706549266544" duration="795000" />
       <workItem from="1706550099305" duration="919000" />
-      <workItem from="1706976163198" duration="492000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <option name="closed" value="true" />
@@ -351,7 +372,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="master" />
+                        <option value="origin/TarikLocal" />
                       </list>
                     </value>
                   </entry>

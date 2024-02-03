@@ -1,5 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ page import="org.gstfac.gestionfactulte.modele.Beans.Personnel" %>
+<%@ page import="org.gstfac.gestionfactulte.modele.entity.Personnel" %>
 
 <%
     // Set the dynamicContentPage attribute to the path of this page
