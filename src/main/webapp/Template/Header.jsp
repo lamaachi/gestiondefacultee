@@ -11,7 +11,7 @@
 
             <!-- Add Departement Button -->
             <li class="nav-item">
-                <a class="nav-link" href="#">Departement</a>
+                <a class="nav-link" href="/gestionFactulte_war_exploded/DepartementServlet">Departement</a>
             </li>
 
             <!-- Add Etudiants Button -->

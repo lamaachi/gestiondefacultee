@@ -9,9 +9,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="caf390ae-914c-48cf-b5d0-54b1830224cf" name="Changes" comment="commit impleemnetation departement">
+    <list default="true" id="caf390ae-914c-48cf-b5d0-54b1830224cf" name="Changes" comment="finish departement">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/controleur/DepartementServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/controleur/DepartementServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/Template/Header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Template/Header.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/departement.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/departement.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -364,7 +364,23 @@
       <option name="project" value="LOCAL" />
       <updated>1706987988066</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="finish departement">
+      <option name="closed" value="true" />
+      <created>1706989036527</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1706989036527</updated>
+    </task>
+    <task id="LOCAL-00010" summary="finish departement">
+      <option name="closed" value="true" />
+      <created>1706989060870</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1706989060870</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -431,7 +447,8 @@
     <MESSAGE value="update Header.jsp" />
     <MESSAGE value="change to Jpa" />
     <MESSAGE value="commit impleemnetation departement" />
-    <option name="LAST_COMMIT_MESSAGE" value="commit impleemnetation departement" />
+    <MESSAGE value="finish departement" />
+    <option name="LAST_COMMIT_MESSAGE" value="finish departement" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/gestiondefacultee$All_in_gestionFactulte.ic" NAME="All in gestionFactulte Coverage Results" MODIFIED="1706981148003" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
