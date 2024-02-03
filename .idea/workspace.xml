@@ -9,30 +9,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="caf390ae-914c-48cf-b5d0-54b1830224cf" name="Changes" comment="change to Jpa">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/controleur/BatimentServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/controleur/DepartementServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/controleur/EtudiantServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/controleur/FiliereServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/controleur/MessagesServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/controleur/PersonnelServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/controleur/SectionServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/batiment.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/departement.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/etudiant.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/filiere.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/message.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/personnel.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/section.jsp" afterDir="false" />
+    <list default="true" id="caf390ae-914c-48cf-b5d0-54b1830224cf" name="Changes" comment="add function deleteByCIN.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/AbstarctFactory/AmphiUsersFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/AbstarctFactory/AmphiUsersFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/controleur/AboutServlet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/controleur/HomeServlet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/controleur/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/controleur/SaisieEtudiant.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/controleur/register.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/modele/DAO/DAOImplimentation/PersonnelDaoJpaImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/modele/DAO/DAOImplimentation/PersonnelDaoJpaImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/modele/DAO/Personnel_DAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/modele/DAO/Personnel_DAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/controleur/DepartementServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/controleur/DepartementServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/controleur/EtudiantServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/controleur/EtudiantServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/controleur/FiliereServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/controleur/FiliereServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/controleur/MessagesServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/controleur/MessagesServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/controleur/PersonnelServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/controleur/PersonnelServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/controleur/SectionServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/controleur/SectionServlet.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,7 +91,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "Tomcat Server.Tomcat 10.1.6.executor": "Run",
-    "git-widget-placeholder": "TarikLocal",
+    "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/HP/IdeaProjects/gestiondefaculte/src/main/java/org/gstfac/gestionfactulte/controleur",
@@ -171,7 +155,13 @@
     </configuration>
     <configuration name="Tomcat 10.1.6" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 10.1.6" ALTERNATIVE_JRE_ENABLED="false">
       <option name="UPDATING_POLICY" value="restart-server" />
-      <deployment />
+      <deployment>
+        <artifact name="gestionFactulte:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/gestionFactulte_war_exploded" />
+          </settings>
+        </artifact>
+      </deployment>
       <server-settings>
         <option name="BASE_DIRECTORY_NAME" value="a6999e66-cc89-414b-ab72-48141108e38b" />
         <option name="HTTP_PORT" value="9090" />
@@ -415,6 +405,7 @@
     <MESSAGE value="second commit" />
     <MESSAGE value="ajouter test method" />
     <MESSAGE value="change to Jpa" />
-    <option name="LAST_COMMIT_MESSAGE" value="change to Jpa" />
+    <MESSAGE value="add function deleteByCIN." />
+    <option name="LAST_COMMIT_MESSAGE" value="add function deleteByCIN." />
   </component>
 </project>

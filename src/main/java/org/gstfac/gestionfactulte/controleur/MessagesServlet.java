@@ -27,7 +27,7 @@ public class MessagesServlet extends HttpServlet {
 //
 //        request.setAttribute("messages", messages);
 //        request.setAttribute("chefDepartements", chefDepartements);
-        request.getRequestDispatcher("/Template/message.jsp").forward(request, response);
+        request.getRequestDispatcher("/pages/message.jsp").forward(request, response);
     }
 
 //    @Override

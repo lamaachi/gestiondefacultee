@@ -42,7 +42,7 @@ public class DepartementServlet extends HttpServlet {
 //            }
 //        }
 //        request.setAttribute("departments",compositeDepartment.getAllDepartments() );
-        request.getRequestDispatcher("/views/departement.jsp").forward(request, response);
+        request.getRequestDispatcher("/pages/departement.jsp").forward(request, response);
     }
 
 //    @Override

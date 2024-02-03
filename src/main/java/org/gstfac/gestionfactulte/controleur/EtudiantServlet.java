@@ -43,7 +43,7 @@ public class EtudiantServlet extends HttpServlet {
 //        List<Etudiant> etudiants = etudiantDao.getAll();
 //        request.setAttribute("sections", sections);
 //        request.setAttribute("etudiants", etudiants);
-        request.getRequestDispatcher("/Template/etudiant.jsp").forward(request, response);
+        request.getRequestDispatcher("/pages/etudiant.jsp").forward(request, response);
     }
 
 //    @Override

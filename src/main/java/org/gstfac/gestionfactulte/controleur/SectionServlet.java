@@ -40,7 +40,7 @@ public class SectionServlet extends HttpServlet {
 //        List<Section> sections = sectionDao.getAll();
 //        request.setAttribute("sections", sections);
 //        request.setAttribute("filieres", filieres);
-        request.getRequestDispatcher("/Template/section.jsp").forward(request, response);
+        request.getRequestDispatcher("/pages/section.jsp").forward(request, response);
     }
 
 //    @Override

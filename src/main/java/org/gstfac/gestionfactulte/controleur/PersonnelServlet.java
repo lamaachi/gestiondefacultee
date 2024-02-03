@@ -38,7 +38,7 @@ public class PersonnelServlet extends HttpServlet {
 //        List<Personnel> personnelList = personnelDao.getAll();
 //        request.setAttribute("personnel", personnel);
 //        request.setAttribute("personnels", personnelList);
-        request.getRequestDispatcher("/Template/personnel.jsp").forward(request, response);
+        request.getRequestDispatcher("/pages/personnel.jsp").forward(request, response);
 
     }
 
