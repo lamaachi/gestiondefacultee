@@ -1,0 +1,432 @@
+Index: src/main/java/org/gstfac/gestionfactulte/controleur/DepartementServlet.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package org.gstfac.gestionfactulte.controleur;\r\n\r\nimport jakarta.servlet.ServletException;\r\nimport jakarta.servlet.annotation.WebServlet;\r\nimport jakarta.servlet.http.HttpServlet;\r\nimport jakarta.servlet.http.HttpServletRequest;\r\nimport jakarta.servlet.http.HttpServletResponse;\r\n\r\nimport java.io.IOException;\r\nimport java.util.List;\r\n\r\n@WebServlet(name = \"DepartementServlet\", value = \"/DepartementServlet\")\r\npublic class DepartementServlet extends HttpServlet {\r\n//    private DepartementDao departementDao;\r\n//    private CompositeDepartment compositeDepartment;\r\n\r\n    @Override\r\n    public void init() throws ServletException {\r\n        super.init();\r\n//        departementDao = new DepartementDaoImpl();\r\n//        List<Departement> departments = departementDao.getAll();\r\n//        compositeDepartment = new CompositeDepartment();\r\n//        for (Departement department : departments) {\r\n//            compositeDepartment.addDepartment(department);\r\n//        }\r\n    }\r\n\r\n\r\n    @Override\r\n    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {\r\n//        String action = request.getParameter(\"action\");\r\n//        String idParam = request.getParameter(\"id\");\r\n//        if (idParam != null && !idParam.isEmpty()) {\r\n//            int id = Integer.parseInt(idParam);\r\n//            if (\"delete\".equals(action)) {\r\n//                Departement deletedDepartment = departementDao.getById(id);\r\n//                departementDao.delete(id);\r\n//                compositeDepartment.removeDepartment(deletedDepartment);\r\n//            } else {\r\n//                Departement department = departementDao.getById(id);\r\n//                request.setAttribute(\"department\", department);\r\n//            }\r\n//        }\r\n//        request.setAttribute(\"departments\",compositeDepartment.getAllDepartments() );\r\n        request.getRequestDispatcher(\"/pages/departement.jsp\").forward(request, response);\r\n    }\r\n\r\n//    @Override\r\n//    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {\r\n//        String idParam = request.getParameter(\"id\");\r\n//        String nom = request.getParameter(\"nom\");\r\n//        if (idParam != null && !idParam.isEmpty()) {\r\n//            int id = Integer.parseInt(idParam);\r\n//            Departement existingDepartement = departementDao.getById(id);\r\n//            if (existingDepartement != null) {\r\n//                existingDepartement.setNom(nom);\r\n//                Departement updatedDepartment = departementDao.getById(id);\r\n//                departementDao.update(existingDepartement);\r\n//                compositeDepartment.updateDepartment(existingDepartement,updatedDepartment);\r\n//            } else {\r\n//                response.setStatus(HttpServletResponse.SC_NOT_FOUND);\r\n//                return;\r\n//            }\r\n//        } else {\r\n//            Departement newDepartement = new Departement();\r\n//            newDepartement.setNom(nom);\r\n//            departementDao.save(newDepartement);\r\n//            compositeDepartment.addDepartment(newDepartement );\r\n//        }\r\n//        request.setAttribute(\"departments\", compositeDepartment.getAllDepartments());\r\n//        request.getRequestDispatcher(\"/views/Departement.jsp\").forward(request, response);\r\n//    }\r\n}\r\n\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/org/gstfac/gestionfactulte/controleur/DepartementServlet.java b/src/main/java/org/gstfac/gestionfactulte/controleur/DepartementServlet.java
+--- a/src/main/java/org/gstfac/gestionfactulte/controleur/DepartementServlet.java	(revision d51ace872f5cf3a7ba9efec8be536d98cc0933b8)
++++ b/src/main/java/org/gstfac/gestionfactulte/controleur/DepartementServlet.java	(date 1706983763601)
+@@ -29,7 +29,7 @@
+     @Override
+     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+ //        String action = request.getParameter("action");
+-//        String idParam = request.getParameter("id");
++//        String idParam = request.getParameter("ID_Departement");
+ //        if (idParam != null && !idParam.isEmpty()) {
+ //            int id = Integer.parseInt(idParam);
+ //            if ("delete".equals(action)) {
+Index: src/main/webapp/pages/departement.jsp
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><%--\r\n  Created by IntelliJ IDEA.\r\n  User: Tarik\r\n  Date: 29/01/2024\r\n  Time: 18:48\r\n  To change this template use File | Settings | File Templates.\r\n--%>\r\n<%@ page contentType=\"text/html;charset=UTF-8\" language=\"java\" %>\r\n<html>\r\n<head>\r\n    <%@ include file=\"../Template/Head.jsp\" %>\r\n    <title>Title</title>\r\n</head>\r\n<body>\r\n<header>\r\n    <%@ include file=\"../Template/Header.jsp\" %>\r\n</header>\r\n<h1>departement</h1>\r\n</body>\r\n</html>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/webapp/pages/departement.jsp b/src/main/webapp/pages/departement.jsp
+--- a/src/main/webapp/pages/departement.jsp	(revision d51ace872f5cf3a7ba9efec8be536d98cc0933b8)
++++ b/src/main/webapp/pages/departement.jsp	(date 1706983763624)
+@@ -15,6 +15,54 @@
+ <header>
+     <%@ include file="../Template/Header.jsp" %>
+ </header>
+-<h1>departement</h1>
++<div>
++    <h2>Add or Update Department</h2>
++    <form action="DepartementServlet" method="post">
++        <label for="nom">Department Name:</label>
++        <input type="hidden" name="ID_Departement" id="id"
++               value="<%= request.getAttribute("department") != null ? ((Departement)request.getAttribute("department")).getId() : "" %>">
++        <input type="text" id="nom" name="Non_Departement" placeholder="Enter department name.." required
++               value="<%= request.getAttribute("department") != null ? ((Departement)request.getAttribute("department")).getNom() : "" %>">
++        <input type="submit" value="Save">
++    </form>
++</div>
++
++<aside id="customers">
++    <h2>Liste des département</h2>
++    <table style="width: 100%">
++        <thead>
++        <tr>
++            <th>ID_Departement</th>
++            <th>Non_Departement</th>
++            <th>Action</th>
++        </tr>
++        </thead>
++        <tbody>
++        <% List<Departement> departments = (List<Departement>) request.getAttribute("departments");
++            if (departments != null && !departments.isEmpty()) {
++                for (Departement department : departments) { %>
++        <tr>
++            <td><%= department.getId() %>
++            </td>
++            <td><%= department.getNom() %>
++            </td>
++            <td><a href="DepartementServlet?id=<%= department.getId() %>">
++                <button class="button button1">Edit</button>
++            </a>
++                <a href="DepartementServlet?action=delete&id=<%= department.getId() %>">
++                    <button class="button button3">Delete</button>
++                </a>
++            </td>
++        </tr>
++        <% }
++        } else { %>
++        <tr>
++            <td colspan="3"><h1>No data found</h1></td>
++        </tr>
++        <% } %>
++        </tbody>
++    </table>
++</aside>
++</main>
+ </body>
+ </html>
+Index: src/main/java/org/gstfac/gestionfactulte/modele/DAO/DAOImplimentation/DepartementDAOImpl.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/org/gstfac/gestionfactulte/modele/DAO/DAOImplimentation/DepartementDAOImpl.java b/src/main/java/org/gstfac/gestionfactulte/modele/DAO/DAOImplimentation/DepartementDAOImpl.java
+new file mode 100644
+--- /dev/null	(date 1706984060623)
++++ b/src/main/java/org/gstfac/gestionfactulte/modele/DAO/DAOImplimentation/DepartementDAOImpl.java	(date 1706984060623)
+@@ -0,0 +1,47 @@
++package org.gstfac.gestionfactulte.modele.DAO.DAOImplimentation;
++
++
++import jakarta.persistence.EntityManager;
++import jakarta.persistence.Query;
++
++import java.util.List;
++
++public class DepartementDAOImpl {
++    private final EntityManager entityManager;
++
++    public DepartementDaoImpl() {
++        entityManager = EntityManagerFactorySingleton.getEntityManagerFactory().createEntityManager();
++    }
++
++    @Override
++    public void save(Departement departement) {
++        entityManager.getTransaction().begin();
++        entityManager.persist(departement);
++        entityManager.getTransaction().commit();
++    }
++    @Override
++    public Departement getById(int id) {
++        return entityManager.find(Departement.class,id);
++    }
++
++    @Override
++    public List<Departement> getAll() {
++        Query query = entityManager.createQuery("SELECT d FROM Departement d");
++        return query.getResultList();
++    }
++
++    @Override
++    public void update(Departement departement) {
++        entityManager.getTransaction().begin();
++        entityManager.merge(departement);
++        entityManager.getTransaction().commit();
++    }
++
++    @Override
++    public void delete(int id) {
++        Departement departement = getById(id);
++        entityManager.getTransaction().begin();
++        entityManager.remove(departement);
++        entityManager.getTransaction().commit();
++    }
++}
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"ArtifactsWorkspaceSettings\">\r\n    <artifacts-to-build>\r\n      <artifact name=\"gestionFactulte:war exploded\" />\r\n    </artifacts-to-build>\r\n  </component>\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"caf390ae-914c-48cf-b5d0-54b1830224cf\" name=\"Changes\" comment=\"change to Jpa\">\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/webapp/pages/filiere.jsp\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/webapp/pages/filiere.jsp\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"CSS File\" />\r\n        <option value=\"Jsp File\" />\r\n        <option value=\"module-info\" />\r\n        <option value=\"Enum\" />\r\n        <option value=\"Interface\" />\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\r\n      <map>\r\n        <entry key=\"$PROJECT_DIR$\" value=\"master\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"GitHubPullRequestSearchHistory\">{\r\n  &quot;lastFilter&quot;: {\r\n    &quot;state&quot;: &quot;OPEN&quot;,\r\n    &quot;assignee&quot;: &quot;lamaachi&quot;\r\n  }\r\n}</component>\r\n  <component name=\"GithubPullRequestsUISettings\">\r\n    <option name=\"selectedUrlAndAccountId\">\r\n      <UrlAndAccount>\r\n        <option name=\"accountId\" value=\"1970aa3b-a564-4c17-8457-47ffefc4c0d5\" />\r\n        <option name=\"url\" value=\"https://github.com/lamaachi/gestiondefacultee.git\" />\r\n      </UrlAndAccount>\r\n    </option>\r\n  </component>\r\n  <component name=\"LogFilters\">\r\n    <option name=\"FILTER_ERRORS\" value=\"false\" />\r\n    <option name=\"FILTER_WARNINGS\" value=\"false\" />\r\n    <option name=\"FILTER_INFO\" value=\"true\" />\r\n    <option name=\"FILTER_DEBUG\" value=\"true\" />\r\n    <option name=\"CUSTOM_FILTER\" />\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"MavenImportPreferences\">\r\n    <option name=\"generalSettings\">\r\n      <MavenGeneralSettings>\r\n        <option name=\"mavenHome\" value=\"Use Maven wrapper\" />\r\n      </MavenGeneralSettings>\r\n    </option>\r\n  </component>\r\n  <component name=\"ProjectColorInfo\">{\r\n  &quot;associatedIndex&quot;: 6\r\n}</component>\r\n  <component name=\"ProjectId\" id=\"2afybcndNHMI45L9Y3nJTMKAq8C\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">{\r\n  &quot;keyToString&quot;: {\r\n    &quot;Application.Main.executor&quot;: &quot;Run&quot;,\r\n    &quot;Application.Test.executor&quot;: &quot;Run&quot;,\r\n    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\r\n    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,\r\n    &quot;Tomcat Server.Tomcat 10.1.6.executor&quot;: &quot;Run&quot;,\r\n    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,\r\n    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,\r\n    &quot;last_opened_file_path&quot;: &quot;C:/Program Files/Apache Software Foundation/Tomcat 10.1/gestionFactulte/src/main/java/org/gstfac/gestionfactulte/modele/entity&quot;,\r\n    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,\r\n    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,\r\n    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,\r\n    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,\r\n    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,\r\n    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,\r\n    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,\r\n    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,\r\n    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,\r\n    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;,\r\n    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;\r\n  }\r\n}</component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"CopyFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Program Files\\Apache Software Foundation\\Tomcat 10.1\\gestionFactulte\\src\\main\\java\\org\\gstfac\\gestionfactulte\\modele\\entity\" />\r\n      <recent name=\"C:\\Program Files\\Apache Software Foundation\\Tomcat 10.1\\gestionFactulte\\src\\main\\resources\\assets\" />\r\n      <recent name=\"C:\\Program Files\\Apache Software Foundation\\Tomcat 10.1\\gestionFactulte\\src\\main\\java\\org\\gstfac\\gestionfactulte\" />\r\n    </key>\r\n    <key name=\"MoveFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Program Files\\Apache Software Foundation\\Tomcat 10.1\\gestionFactulte\\src\\main\\webapp\\Images\" />\r\n      <recent name=\"C:\\Program Files\\Apache Software Foundation\\Tomcat 10.1\\gestionFactulte\\src\\main\\webapp\" />\r\n      <recent name=\"C:\\Program Files\\Apache Software Foundation\\Tomcat 10.1\\gestionFactulte\\src\\main\\resources\\assets\\css\" />\r\n      <recent name=\"C:\\Program Files\\Apache Software Foundation\\Tomcat 10.1\\gestionFactulte\\src\\main\\resources\\assets\" />\r\n      <recent name=\"C:\\Program Files\\Apache Software Foundation\\Tomcat 10.1\\gestionFactulte\\src\\main\\webapp\\Template\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"RunManager\" selected=\"Tomcat Server.Tomcat 10.1.6\">\r\n    <configuration name=\"Main\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"org.gstfac.gestionfactulte.controleur.Main\" />\r\n      <module name=\"gestionFactulte\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"org.gstfac.gestionfactulte.controleur.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"Test\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"org.gstfac.gestionfactulte.Test\" />\r\n      <module name=\"gestionFactulte\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"org.gstfac.gestionfactulte.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"Tomcat 10.1.6\" type=\"#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory\" factoryName=\"Local\" APPLICATION_SERVER_NAME=\"Tomcat 10.1.6\" ALTERNATIVE_JRE_ENABLED=\"false\">\r\n      <deployment>\r\n        <artifact name=\"gestionFactulte:war exploded\">\r\n          <settings>\r\n            <option name=\"CONTEXT_PATH\" value=\"/gestionFactulte_war_exploded\" />\r\n          </settings>\r\n        </artifact>\r\n      </deployment>\r\n      <server-settings>\r\n        <option name=\"BASE_DIRECTORY_NAME\" value=\"a6999e66-cc89-414b-ab72-48141108e38b\" />\r\n        <option name=\"HTTP_PORT\" value=\"9090\" />\r\n      </server-settings>\r\n      <predefined_log_file enabled=\"true\" id=\"Tomcat\" />\r\n      <predefined_log_file enabled=\"true\" id=\"Tomcat Catalina\" />\r\n      <predefined_log_file id=\"Tomcat Manager\" />\r\n      <predefined_log_file id=\"Tomcat Host Manager\" />\r\n      <predefined_log_file id=\"Tomcat Localhost Access\" />\r\n      <RunnerSettings RunnerId=\"Debug\">\r\n        <option name=\"DEBUG_PORT\" value=\"58501\" />\r\n      </RunnerSettings>\r\n      <ConfigurationWrapper VM_VAR=\"JAVA_OPTS\" RunnerId=\"Cover\">\r\n        <option name=\"USE_ENV_VARIABLES\" value=\"true\" />\r\n        <STARTUP>\r\n          <option name=\"USE_DEFAULT\" value=\"true\" />\r\n          <option name=\"SCRIPT\" value=\"\" />\r\n          <option name=\"VM_PARAMETERS\" value=\"\" />\r\n          <option name=\"PROGRAM_PARAMETERS\" value=\"\" />\r\n        </STARTUP>\r\n        <SHUTDOWN>\r\n          <option name=\"USE_DEFAULT\" value=\"true\" />\r\n          <option name=\"SCRIPT\" value=\"\" />\r\n          <option name=\"VM_PARAMETERS\" value=\"\" />\r\n          <option name=\"PROGRAM_PARAMETERS\" value=\"\" />\r\n        </SHUTDOWN>\r\n      </ConfigurationWrapper>\r\n      <ConfigurationWrapper VM_VAR=\"JAVA_OPTS\" RunnerId=\"Debug\">\r\n        <option name=\"USE_ENV_VARIABLES\" value=\"true\" />\r\n        <STARTUP>\r\n          <option name=\"USE_DEFAULT\" value=\"true\" />\r\n          <option name=\"SCRIPT\" value=\"\" />\r\n          <option name=\"VM_PARAMETERS\" value=\"\" />\r\n          <option name=\"PROGRAM_PARAMETERS\" value=\"\" />\r\n        </STARTUP>\r\n        <SHUTDOWN>\r\n          <option name=\"USE_DEFAULT\" value=\"true\" />\r\n          <option name=\"SCRIPT\" value=\"\" />\r\n          <option name=\"VM_PARAMETERS\" value=\"\" />\r\n          <option name=\"PROGRAM_PARAMETERS\" value=\"\" />\r\n        </SHUTDOWN>\r\n      </ConfigurationWrapper>\r\n      <ConfigurationWrapper VM_VAR=\"JAVA_OPTS\" RunnerId=\"Profile\">\r\n        <option name=\"USE_ENV_VARIABLES\" value=\"true\" />\r\n        <STARTUP>\r\n          <option name=\"USE_DEFAULT\" value=\"true\" />\r\n          <option name=\"SCRIPT\" value=\"\" />\r\n          <option name=\"VM_PARAMETERS\" value=\"\" />\r\n          <option name=\"PROGRAM_PARAMETERS\" value=\"\" />\r\n        </STARTUP>\r\n        <SHUTDOWN>\r\n          <option name=\"USE_DEFAULT\" value=\"true\" />\r\n          <option name=\"SCRIPT\" value=\"\" />\r\n          <option name=\"VM_PARAMETERS\" value=\"\" />\r\n          <option name=\"PROGRAM_PARAMETERS\" value=\"\" />\r\n        </SHUTDOWN>\r\n      </ConfigurationWrapper>\r\n      <ConfigurationWrapper VM_VAR=\"JAVA_OPTS\" RunnerId=\"Run\">\r\n        <option name=\"USE_ENV_VARIABLES\" value=\"true\" />\r\n        <STARTUP>\r\n          <option name=\"USE_DEFAULT\" value=\"true\" />\r\n          <option name=\"SCRIPT\" value=\"\" />\r\n          <option name=\"VM_PARAMETERS\" value=\"\" />\r\n          <option name=\"PROGRAM_PARAMETERS\" value=\"\" />\r\n        </STARTUP>\r\n        <SHUTDOWN>\r\n          <option name=\"USE_DEFAULT\" value=\"true\" />\r\n          <option name=\"SCRIPT\" value=\"\" />\r\n          <option name=\"VM_PARAMETERS\" value=\"\" />\r\n          <option name=\"PROGRAM_PARAMETERS\" value=\"\" />\r\n        </SHUTDOWN>\r\n      </ConfigurationWrapper>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n        <option name=\"BuildArtifacts\" enabled=\"true\">\r\n          <artifact name=\"gestionFactulte:war exploded\" />\r\n        </option>\r\n      </method>\r\n    </configuration>\r\n    <list>\r\n      <item itemvalue=\"Application.Main\" />\r\n      <item itemvalue=\"Application.Test\" />\r\n      <item itemvalue=\"Tomcat Server.Tomcat 10.1.6\" />\r\n    </list>\r\n    <recent_temporary>\r\n      <list>\r\n        <item itemvalue=\"Application.Test\" />\r\n        <item itemvalue=\"Application.Main\" />\r\n        <item itemvalue=\"Application.Main\" />\r\n        <item itemvalue=\"Application.Test\" />\r\n      </list>\r\n    </recent_temporary>\r\n  </component>\r\n  <component name=\"SharedIndexes\">\r\n    <attachedChunks>\r\n      <set>\r\n        <option value=\"jdk-19.0.2-corretto-19.0.2-3183f394aec4-f0552fc0\" />\r\n      </set>\r\n    </attachedChunks>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"caf390ae-914c-48cf-b5d0-54b1830224cf\" name=\"Changes\" comment=\"\" />\r\n      <created>1704724001346</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1704724001346</updated>\r\n      <workItem from=\"1704724002569\" duration=\"1202000\" />\r\n      <workItem from=\"1705069948597\" duration=\"158000\" />\r\n      <workItem from=\"1705070129238\" duration=\"2815000\" />\r\n      <workItem from=\"1705074901649\" duration=\"12138000\" />\r\n      <workItem from=\"1705101432522\" duration=\"13642000\" />\r\n      <workItem from=\"1705147637462\" duration=\"4102000\" />\r\n      <workItem from=\"1705177079418\" duration=\"3144000\" />\r\n      <workItem from=\"1705181876943\" duration=\"684000\" />\r\n      <workItem from=\"1705234938059\" duration=\"8000\" />\r\n      <workItem from=\"1705481494343\" duration=\"6736000\" />\r\n      <workItem from=\"1705536552847\" duration=\"3744000\" />\r\n      <workItem from=\"1705866422499\" duration=\"3017000\" />\r\n      <workItem from=\"1705958756748\" duration=\"3086000\" />\r\n      <workItem from=\"1705963430153\" duration=\"7281000\" />\r\n      <workItem from=\"1706220173744\" duration=\"1557000\" />\r\n      <workItem from=\"1706459835673\" duration=\"1329000\" />\r\n      <workItem from=\"1706461198541\" duration=\"12000\" />\r\n      <workItem from=\"1706461661220\" duration=\"2819000\" />\r\n      <workItem from=\"1706527494161\" duration=\"13000\" />\r\n      <workItem from=\"1706539609506\" duration=\"2480000\" />\r\n      <workItem from=\"1706544403115\" duration=\"2329000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"first commit\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1704724041031</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1704724041031</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"update servle and add doGet\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1704724650316</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1704724650316</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"second commit\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1705488211610</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1705488211611</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"ajouter test method\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1705869449007</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1705869449007</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00005\" summary=\"change to Jpa\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1706048463663</created>\r\n      <option name=\"number\" value=\"00005\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1706048463664</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00006\" summary=\"change to Jpa\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1706541636988</created>\r\n      <option name=\"number\" value=\"00006\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1706541636988</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"7\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"OPEN_GENERIC_TABS\">\r\n      <map>\r\n        <entry key=\"de558ccf-39a8-4a4a-a929-4252a4a23635\" value=\"TOOL_WINDOW\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State>\r\n              <option name=\"FILTERS\">\r\n                <map>\r\n                  <entry key=\"branch\">\r\n                    <value>\r\n                      <list>\r\n                        <option value=\"lamaachiBranch\" />\r\n                      </list>\r\n                    </value>\r\n                  </entry>\r\n                </map>\r\n              </option>\r\n            </State>\r\n          </value>\r\n        </entry>\r\n        <entry key=\"de558ccf-39a8-4a4a-a929-4252a4a23635\">\r\n          <value>\r\n            <State>\r\n              <option name=\"FILTERS\">\r\n                <map>\r\n                  <entry key=\"branch\">\r\n                    <value>\r\n                      <list>\r\n                        <option value=\"HEAD\" />\r\n                      </list>\r\n                    </value>\r\n                  </entry>\r\n                  <entry key=\"roots\">\r\n                    <value>\r\n                      <list>\r\n                        <option value=\"$PROJECT_DIR$\" />\r\n                      </list>\r\n                    </value>\r\n                  </entry>\r\n                </map>\r\n              </option>\r\n              <option name=\"SHOW_ONLY_AFFECTED_CHANGES\" value=\"true\" />\r\n            </State>\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"first commit\" />\r\n    <MESSAGE value=\"update servle and add doGet\" />\r\n    <MESSAGE value=\"second commit\" />\r\n    <MESSAGE value=\"ajouter test method\" />\r\n    <MESSAGE value=\"change to Jpa\" />\r\n    <MESSAGE value=\"update Header.jsp\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"update Header.jsp\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision d51ace872f5cf3a7ba9efec8be536d98cc0933b8)
++++ b/.idea/workspace.xml	(date 1706983764514)
+@@ -9,9 +9,11 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="caf390ae-914c-48cf-b5d0-54b1830224cf" name="Changes" comment="change to Jpa">
++    <list default="true" id="caf390ae-914c-48cf-b5d0-54b1830224cf" name="Changes" comment="ajout de head dans tout les jsp">
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/filiere.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/filiere.jsp" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/controleur/DepartementServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/controleur/DepartementServlet.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/departement.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/departement.jsp" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/etudiant.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/etudiant.jsp" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -78,30 +80,36 @@
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+   </component>
+-  <component name="PropertiesComponent">{
+-  &quot;keyToString&quot;: {
+-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+-    &quot;Application.Test.executor&quot;: &quot;Run&quot;,
+-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+-    &quot;Tomcat Server.Tomcat 10.1.6.executor&quot;: &quot;Run&quot;,
+-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+-    &quot;last_opened_file_path&quot;: &quot;C:/Program Files/Apache Software Foundation/Tomcat 10.1/gestionFactulte/src/main/java/org/gstfac/gestionfactulte/modele/entity&quot;,
+-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;,
+-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
++  <component name="PropertiesComponent"><![CDATA[{
++  "keyToString": {
++    "Application.Main.executor": "Run",
++    "Application.Test.executor": "Run",
++    "Application.gestionfactulte.executor": "Run",
++    "JUnit.All in gestionFactulte.executor": "Run",
++    "RunOnceActivity.OpenProjectViewOnStart": "true",
++    "RunOnceActivity.ShowReadmeOnStart": "true",
++    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
++    "Smart Tomcat.Tomcat: gestionFactultee.executor": "Run",
++    "TomEE Server.TomEE 10.1.18.executor": "Run",
++    "TomEE Server.Unnamed.executor": "Run",
++    "Tomcat Server.Tomcat 10.1.6.executor": "Run",
++    "git-widget-placeholder": "master",
++    "ignore.virus.scanning.warn.message": "true",
++    "kotlin-language-version-configured": "true",
++    "last_opened_file_path": "C:/Users/HP/IdeaProjects/gestiondefacultee",
++    "list.type.of.created.stylesheet": "CSS",
++    "node.js.detected.package.eslint": "true",
++    "node.js.detected.package.tslint": "true",
++    "node.js.selected.package.eslint": "(autodetect)",
++    "node.js.selected.package.tslint": "(autodetect)",
++    "nodejs_package_manager_path": "npm",
++    "project.structure.last.edited": "Modules",
++    "project.structure.proportion": "0.15",
++    "project.structure.side.proportion": "0.2",
++    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
++    "vue.rearranger.settings.migration": "true"
+   }
+-}</component>
++}]]></component>
+   <component name="RecentsManager">
+     <key name="CopyFile.RECENT_KEYS">
+       <recent name="C:\Program Files\Apache Software Foundation\Tomcat 10.1\gestionFactulte\src\main\java\org\gstfac\gestionfactulte\modele\entity" />
+@@ -116,138 +124,51 @@
+       <recent name="C:\Program Files\Apache Software Foundation\Tomcat 10.1\gestionFactulte\src\main\webapp\Template" />
+     </key>
+   </component>
+-  <component name="RunManager" selected="Tomcat Server.Tomcat 10.1.6">
+-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+-      <option name="MAIN_CLASS_NAME" value="org.gstfac.gestionfactulte.controleur.Main" />
+-      <module name="gestionFactulte" />
+-      <extension name="coverage">
+-        <pattern>
+-          <option name="PATTERN" value="org.gstfac.gestionfactulte.controleur.*" />
+-          <option name="ENABLED" value="true" />
+-        </pattern>
+-      </extension>
+-      <method v="2">
+-        <option name="Make" enabled="true" />
+-      </method>
+-    </configuration>
+-    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+-      <option name="MAIN_CLASS_NAME" value="org.gstfac.gestionfactulte.Test" />
++  <component name="RunDashboard">
++    <option name="excludedTypes">
++      <set>
++        <option value="TomeeConfiguration" />
++      </set>
++    </option>
++  </component>
++  <component name="RunManager">
++    <configuration name="Tomcat: gestionFactultee" type="com.poratu.idea.plugins.tomcat" singleton="false" temporary="true">
++      <predefined_log_file enabled="true" id="Tomcat Localhost Log" />
++      <predefined_log_file enabled="true" id="Tomcat Access Log" />
++      <predefined_log_file id="Tomcat Catalina Log" />
++      <predefined_log_file id="Tomcat Manager Log" />
++      <predefined_log_file id="Tomcat Host Manager Log" />
++      <option name="catalinaBase" value="C:\Users\HP\IdeaProjects\gestiondefacultee" />
++      <option name="contextPath" value="/gestionFactultee" />
++      <option name="docBase" value="$PROJECT_DIR$/src/main/webapp" />
++      <option name="envOptions">
++        <map />
++      </option>
++      <option name="extraClassPath" value="" />
++      <option name="tomcatInfo">
++        <TomcatInfo>
++          <option name="name" value="Apache Tomcat/10.1.18" />
++          <option name="path" value="$PROJECT_DIR$/../../../../Program Files/Apache Software Foundation/apache-tomcat-10.1.18-windows-x64/apache-tomcat-10.1.18" />
++          <option name="version" value="10.1.18.0" />
++        </TomcatInfo>
++      </option>
++      <option name="vmOptions" value="" />
+       <module name="gestionFactulte" />
+-      <extension name="coverage">
+-        <pattern>
+-          <option name="PATTERN" value="org.gstfac.gestionfactulte.*" />
+-          <option name="ENABLED" value="true" />
+-        </pattern>
+-      </extension>
+-      <method v="2">
+-        <option name="Make" enabled="true" />
+-      </method>
+-    </configuration>
+-    <configuration name="Tomcat 10.1.6" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 10.1.6" ALTERNATIVE_JRE_ENABLED="false">
+-      <deployment>
+-        <artifact name="gestionFactulte:war exploded">
+-          <settings>
+-            <option name="CONTEXT_PATH" value="/gestionFactulte_war_exploded" />
+-          </settings>
+-        </artifact>
+-      </deployment>
+-      <server-settings>
+-        <option name="BASE_DIRECTORY_NAME" value="a6999e66-cc89-414b-ab72-48141108e38b" />
+-        <option name="HTTP_PORT" value="9090" />
+-      </server-settings>
+-      <predefined_log_file enabled="true" id="Tomcat" />
+-      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+-      <predefined_log_file id="Tomcat Manager" />
+-      <predefined_log_file id="Tomcat Host Manager" />
+-      <predefined_log_file id="Tomcat Localhost Access" />
+-      <RunnerSettings RunnerId="Debug">
+-        <option name="DEBUG_PORT" value="58501" />
+-      </RunnerSettings>
+-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+-        <option name="USE_ENV_VARIABLES" value="true" />
+-        <STARTUP>
+-          <option name="USE_DEFAULT" value="true" />
+-          <option name="SCRIPT" value="" />
+-          <option name="VM_PARAMETERS" value="" />
+-          <option name="PROGRAM_PARAMETERS" value="" />
+-        </STARTUP>
+-        <SHUTDOWN>
+-          <option name="USE_DEFAULT" value="true" />
+-          <option name="SCRIPT" value="" />
+-          <option name="VM_PARAMETERS" value="" />
+-          <option name="PROGRAM_PARAMETERS" value="" />
+-        </SHUTDOWN>
+-      </ConfigurationWrapper>
+-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+-        <option name="USE_ENV_VARIABLES" value="true" />
+-        <STARTUP>
+-          <option name="USE_DEFAULT" value="true" />
+-          <option name="SCRIPT" value="" />
+-          <option name="VM_PARAMETERS" value="" />
+-          <option name="PROGRAM_PARAMETERS" value="" />
+-        </STARTUP>
+-        <SHUTDOWN>
+-          <option name="USE_DEFAULT" value="true" />
+-          <option name="SCRIPT" value="" />
+-          <option name="VM_PARAMETERS" value="" />
+-          <option name="PROGRAM_PARAMETERS" value="" />
+-        </SHUTDOWN>
+-      </ConfigurationWrapper>
+-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Profile">
+-        <option name="USE_ENV_VARIABLES" value="true" />
+-        <STARTUP>
+-          <option name="USE_DEFAULT" value="true" />
+-          <option name="SCRIPT" value="" />
+-          <option name="VM_PARAMETERS" value="" />
+-          <option name="PROGRAM_PARAMETERS" value="" />
+-        </STARTUP>
+-        <SHUTDOWN>
+-          <option name="USE_DEFAULT" value="true" />
+-          <option name="SCRIPT" value="" />
+-          <option name="VM_PARAMETERS" value="" />
+-          <option name="PROGRAM_PARAMETERS" value="" />
+-        </SHUTDOWN>
+-      </ConfigurationWrapper>
+-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+-        <option name="USE_ENV_VARIABLES" value="true" />
+-        <STARTUP>
+-          <option name="USE_DEFAULT" value="true" />
+-          <option name="SCRIPT" value="" />
+-          <option name="VM_PARAMETERS" value="" />
+-          <option name="PROGRAM_PARAMETERS" value="" />
+-        </STARTUP>
+-        <SHUTDOWN>
+-          <option name="USE_DEFAULT" value="true" />
+-          <option name="SCRIPT" value="" />
+-          <option name="VM_PARAMETERS" value="" />
+-          <option name="PROGRAM_PARAMETERS" value="" />
+-        </SHUTDOWN>
+-      </ConfigurationWrapper>
+       <method v="2">
+         <option name="Make" enabled="true" />
+-        <option name="BuildArtifacts" enabled="true">
+-          <artifact name="gestionFactulte:war exploded" />
+-        </option>
+       </method>
+     </configuration>
+-    <list>
+-      <item itemvalue="Application.Main" />
+-      <item itemvalue="Application.Test" />
+-      <item itemvalue="Tomcat Server.Tomcat 10.1.6" />
+-    </list>
+     <recent_temporary>
+       <list>
+-        <item itemvalue="Application.Test" />
+-        <item itemvalue="Application.Main" />
+-        <item itemvalue="Application.Main" />
+-        <item itemvalue="Application.Test" />
++        <item itemvalue="Smart Tomcat.Tomcat: gestionFactultee" />
+       </list>
+     </recent_temporary>
+   </component>
+   <component name="SharedIndexes">
+     <attachedChunks>
+       <set>
+-        <option value="jdk-19.0.2-corretto-19.0.2-3183f394aec4-f0552fc0" />
++        <option value="jdk-19.0.2-corretto-19.0.2-4caba194b151-48ba4555" />
++        <option value="jdk-19.0.2-corretto-19.0.2-f644763e9732-1e16d6ec" />
+       </set>
+     </attachedChunks>
+   </component>
+@@ -280,6 +201,7 @@
+       <workItem from="1706527494161" duration="13000" />
+       <workItem from="1706539609506" duration="2480000" />
+       <workItem from="1706544403115" duration="2329000" />
++      <workItem from="1706980741389" duration="1629000" />
+     </task>
+     <task id="LOCAL-00001" summary="first commit">
+       <option name="closed" value="true" />
+@@ -397,4 +319,7 @@
+     <MESSAGE value="update Header.jsp" />
+     <option name="LAST_COMMIT_MESSAGE" value="update Header.jsp" />
+   </component>
++  <component name="com.intellij.coverage.CoverageDataManagerImpl">
++    <SUITE FILE_PATH="coverage/gestiondefacultee$All_in_gestionFactulte.ic" NAME="All in gestionFactulte Coverage Results" MODIFIED="1706981148003" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
++  </component>
+ </project>
+\ No newline at end of file
+Index: src/main/webapp/pages/etudiant.jsp
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><%--\r\n  Created by IntelliJ IDEA.\r\n  User: Tarik\r\n  Date: 29/01/2024\r\n  Time: 18:46\r\n  To change this template use File | Settings | File Templates.\r\n--%>\r\n<%@ page contentType=\"text/html;charset=UTF-8\" language=\"java\" %>\r\n<html>\r\n<head>\r\n    <%@ include file=\"../Template/Head.jsp\" %>\r\n    <title>Title</title>\r\n</head>\r\n<body>\r\n<header>\r\n    <%@ include file=\"../Template/Header.jsp\" %>\r\n</header>\r\n<h1>etudiant</h1>\r\n</body>\r\n</html>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/webapp/pages/etudiant.jsp b/src/main/webapp/pages/etudiant.jsp
+--- a/src/main/webapp/pages/etudiant.jsp	(revision d51ace872f5cf3a7ba9efec8be536d98cc0933b8)
++++ b/src/main/webapp/pages/etudiant.jsp	(date 1706979217245)
+@@ -16,5 +16,7 @@
+     <%@ include file="../Template/Header.jsp" %>
+ </header>
+ <h1>etudiant</h1>
++
++
+ </body>
+ </html>
