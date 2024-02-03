@@ -9,9 +9,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="caf390ae-914c-48cf-b5d0-54b1830224cf" name="Changes" comment="change to Jpa">
+    <list default="true" id="caf390ae-914c-48cf-b5d0-54b1830224cf" name="Changes" comment="update fiilier head">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/filiere.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/filiere.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/HomePage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/HomePage.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,11 +110,11 @@
       <recent name="C:\Program Files\Apache Software Foundation\Tomcat 10.1\gestionFactulte\src\main\java\org\gstfac\gestionfactulte" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\zertyuiop\Desktop\gestiondefacultee1\src\main\webapp" />
       <recent name="C:\Program Files\Apache Software Foundation\Tomcat 10.1\gestionFactulte\src\main\webapp\Images" />
       <recent name="C:\Program Files\Apache Software Foundation\Tomcat 10.1\gestionFactulte\src\main\webapp" />
       <recent name="C:\Program Files\Apache Software Foundation\Tomcat 10.1\gestionFactulte\src\main\resources\assets\css" />
       <recent name="C:\Program Files\Apache Software Foundation\Tomcat 10.1\gestionFactulte\src\main\resources\assets" />
-      <recent name="C:\Program Files\Apache Software Foundation\Tomcat 10.1\gestionFactulte\src\main\webapp\Template" />
     </key>
   </component>
   <component name="RunManager" selected="Tomcat Server.Tomcat 10.1.6">
@@ -329,7 +330,15 @@
       <option name="project" value="LOCAL" />
       <updated>1706541636988</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="update fiilier head">
+      <option name="closed" value="true" />
+      <created>1706978148846</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1706978148846</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -395,6 +404,7 @@
     <MESSAGE value="ajouter test method" />
     <MESSAGE value="change to Jpa" />
     <MESSAGE value="update Header.jsp" />
-    <option name="LAST_COMMIT_MESSAGE" value="update Header.jsp" />
+    <MESSAGE value="update fiilier head" />
+    <option name="LAST_COMMIT_MESSAGE" value="update fiilier head" />
   </component>
 </project>

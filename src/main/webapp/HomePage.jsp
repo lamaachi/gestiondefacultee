@@ -8,14 +8,12 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
+    <%@ include file="Template/Head.jsp" %>
     <title>Title</title>
 </head>
-<header>
-    <%@ include file="../Template/Header.jsp" %>
-</header>
 <body>
 <header>
-    <%@ include file="../Template/Header.jsp" %>
+    <%@ include file="Template/Header.jsp" %>
 </header>
     <h1>Home Page</h1>
 </body>
