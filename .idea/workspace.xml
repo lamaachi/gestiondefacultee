@@ -10,21 +10,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="caf390ae-914c-48cf-b5d0-54b1830224cf" name="Changes" comment="change to Jpa">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/Factory/AdministarteurFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/Factory/AmphiFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/Factory/ChefDepartementFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/Factory/PersonnelFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/Factory/ClasseFactory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/Factory/IBatimentFactory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/mediator/ChefDepartementMediatorImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/mediator/ChefDepartementMediatorImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/modele/Beans/Departement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/modele/Beans/Departement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/modele/DAO/DAOImplimentation/Batiment_DAO_JDBC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/modele/DAO/DAOImplimentation/Batiment_DAO_JDBC.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/modele/DAO/JDBCSingleton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/modele/DAO/JDBCSingleton.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/modele/DAO/JDBC_Connexion.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/modele/entity/ChefDepartement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/modele/entity/ChefDepartement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/modele/entity/Departement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/modele/entity/Departement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/modele/entity/Salle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/modele/entity/Salle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/filiere.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/filiere.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -407,6 +394,7 @@
     <MESSAGE value="second commit" />
     <MESSAGE value="ajouter test method" />
     <MESSAGE value="change to Jpa" />
-    <option name="LAST_COMMIT_MESSAGE" value="change to Jpa" />
+    <MESSAGE value="update Header.jsp" />
+    <option name="LAST_COMMIT_MESSAGE" value="update Header.jsp" />
   </component>
 </project>
