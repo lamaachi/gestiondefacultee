@@ -10,29 +10,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="caf390ae-914c-48cf-b5d0-54b1830224cf" name="Changes" comment="change to Jpa">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/controleur/BatimentServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/controleur/DepartementServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/controleur/EtudiantServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/controleur/FiliereServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/controleur/MessagesServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/controleur/PersonnelServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/controleur/SectionServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/batiment.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/departement.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/etudiant.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/filiere.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/message.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/personnel.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/section.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/Factory/AdministarteurFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/Factory/AmphiFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/Factory/ChefDepartementFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/Factory/PersonnelFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/AbstarctFactory/AmphiUsersFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/AbstarctFactory/AmphiUsersFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/controleur/AboutServlet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/controleur/HomeServlet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/controleur/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/controleur/SaisieEtudiant.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/controleur/register.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/modele/DAO/DAOImplimentation/PersonnelDaoJpaImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/modele/DAO/DAOImplimentation/PersonnelDaoJpaImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/modele/DAO/Personnel_DAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/modele/DAO/Personnel_DAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/Factory/ClasseFactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/Factory/IBatimentFactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/mediator/ChefDepartementMediatorImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/mediator/ChefDepartementMediatorImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/modele/Beans/Departement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/modele/Beans/Departement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/modele/DAO/DAOImplimentation/Batiment_DAO_JDBC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/modele/DAO/DAOImplimentation/Batiment_DAO_JDBC.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/modele/DAO/JDBCSingleton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/modele/DAO/JDBCSingleton.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/modele/DAO/JDBC_Connexion.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/modele/entity/ChefDepartement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/modele/entity/ChefDepartement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/modele/entity/Departement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/modele/entity/Departement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/modele/entity/Salle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/modele/entity/Salle.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,11 +35,11 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
+        <option value="Jsp File" />
         <option value="module-info" />
         <option value="Enum" />
         <option value="Interface" />
         <option value="Class" />
-        <option value="Jsp File" />
       </list>
     </option>
   </component>
@@ -99,34 +91,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Main.executor": "Run",
-    "Application.Test.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Tomcat Server.Tomcat 10.1.6.executor": "Run",
-    "git-widget-placeholder": "TarikLocal",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/HP/IdeaProjects/gestiondefaculte/src/main/java/org/gstfac/gestionfactulte/controleur",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Test.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Tomcat Server.Tomcat 10.1.6.executor&quot;: &quot;Run&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Program Files/Apache Software Foundation/Tomcat 10.1/gestionFactulte/src/main/java/org/gstfac/gestionfactulte/modele/entity&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\HP\IdeaProjects\gestiondefaculte\src\main\java\org\gstfac\gestionfactulte\controleur" />
       <recent name="C:\Program Files\Apache Software Foundation\Tomcat 10.1\gestionFactulte\src\main\java\org\gstfac\gestionfactulte\modele\entity" />
       <recent name="C:\Program Files\Apache Software Foundation\Tomcat 10.1\gestionFactulte\src\main\resources\assets" />
       <recent name="C:\Program Files\Apache Software Foundation\Tomcat 10.1\gestionFactulte\src\main\java\org\gstfac\gestionfactulte" />
@@ -137,9 +127,6 @@
       <recent name="C:\Program Files\Apache Software Foundation\Tomcat 10.1\gestionFactulte\src\main\resources\assets\css" />
       <recent name="C:\Program Files\Apache Software Foundation\Tomcat 10.1\gestionFactulte\src\main\resources\assets" />
       <recent name="C:\Program Files\Apache Software Foundation\Tomcat 10.1\gestionFactulte\src\main\webapp\Template" />
-    </key>
-    <key name="ExtractSuperBase.RECENT_KEYS">
-      <recent name="org.gstfac.gestionfactulte.controleur" />
     </key>
   </component>
   <component name="RunManager" selected="Tomcat Server.Tomcat 10.1.6">
@@ -170,8 +157,13 @@
       </method>
     </configuration>
     <configuration name="Tomcat 10.1.6" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 10.1.6" ALTERNATIVE_JRE_ENABLED="false">
-      <option name="UPDATING_POLICY" value="restart-server" />
-      <deployment />
+      <deployment>
+        <artifact name="gestionFactulte:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/gestionFactulte_war_exploded" />
+          </settings>
+        </artifact>
+      </deployment>
       <server-settings>
         <option name="BASE_DIRECTORY_NAME" value="a6999e66-cc89-414b-ab72-48141108e38b" />
         <option name="HTTP_PORT" value="9090" />
@@ -258,6 +250,8 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Test" />
+        <item itemvalue="Application.Main" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.Test" />
       </list>
@@ -266,7 +260,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="jdk-19.0.2-corretto-19.0.2-f644763e9732-1e16d6ec" />
+        <option value="jdk-19.0.2-corretto-19.0.2-3183f394aec4-f0552fc0" />
       </set>
     </attachedChunks>
   </component>
@@ -299,8 +293,6 @@
       <workItem from="1706527494161" duration="13000" />
       <workItem from="1706539609506" duration="2480000" />
       <workItem from="1706544403115" duration="2329000" />
-      <workItem from="1706549266544" duration="795000" />
-      <workItem from="1706550099305" duration="919000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <option name="closed" value="true" />
@@ -372,7 +364,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="origin/TarikLocal" />
+                        <option value="lamaachiBranch" />
                       </list>
                     </value>
                   </entry>

@@ -14,6 +14,6 @@
 <header>
     <%@ include file="../Template/Header.jsp" %>
 </header>
-<h1>section</h1>
+<h1>section page</h1>
 </body>
 </html>
