@@ -34,7 +34,7 @@ public class FiliereServlet extends HttpServlet {
 //        request.setAttribute("filieres", filieres);
 //        List<Departement> departments = departementDao.getAll();
 //        request.setAttribute("departements", departments);
-        request.getRequestDispatcher("/Template/filiere.jsp").forward(request, response);
+        request.getRequestDispatcher("/pages/filiere.jsp").forward(request, response);
     }
 
 //    @Override

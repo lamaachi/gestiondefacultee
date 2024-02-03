@@ -9,4 +9,5 @@ public interface Section_DAO {
     void insert(Section section);
     void update(Section section);
     void deleteByID(int ID_Section);
+    void deleteByCIN(int ID_Section);
 }
