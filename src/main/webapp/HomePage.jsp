@@ -11,11 +11,11 @@
     <title>Title</title>
 </head>
 <header>
-    <%@ include file="../Template/Header.jsp" %>
+    <%@ include file="./Template/Head.jsp" %>
 </header>
 <body>
 <header>
-    <%@ include file="../Template/Header.jsp" %>
+    <%@ include file="./Template/Header.jsp" %>
 </header>
     <h1>Home Page</h1>
 </body>

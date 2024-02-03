@@ -5,6 +5,7 @@ import org.gstfac.gestionfactulte.modele.entity.Batiment;
 import java.util.ArrayList;
 
 public interface Batiment_DAO {
+
     ArrayList<Batiment> findAll();
     Batiment findByID(int ID_Batiment);
     void insert(Batiment batiment);

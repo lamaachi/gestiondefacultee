@@ -6,7 +6,7 @@
             <!-- List -->
             <!-- Add Batiments Button -->
             <li class="nav-item">
-                <a class="nav-link" href="#">Batiments</a>
+                <a class="nav-link" href="/gestionFactulte_war_exploded/BatimentServlet">Batiments</a>
             </li>
 
             <!-- Add Departement Button -->

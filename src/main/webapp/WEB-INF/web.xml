@@ -3,8 +3,21 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd"
          version="5.0">
+
     <!-- Define the welcome file -->
     <welcome-file-list>
         <welcome-file>HomePage.jsp</welcome-file>
     </welcome-file-list>
+
+    <!-- Servlet Mapping -->
+    <servlet>
+        <servlet-name>BatimentServlet</servlet-name>
+        <servlet-class>org.gstfac.gestionfactulte.controleur.BatimentServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>BatimentServlet</servlet-name>
+        <url-pattern>/BatimentServlet</url-pattern>
+    </servlet-mapping>
+
 </web-app>
