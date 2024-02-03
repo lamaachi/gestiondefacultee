@@ -1,4 +1,4 @@
-<%--
+<%@ page import="org.gstfac.gestionfactulte.modele.entity.Departement" %><%--
   Created by IntelliJ IDEA.
   User: Tarik
   Date: 29/01/2024

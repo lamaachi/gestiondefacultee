@@ -9,13 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="caf390ae-914c-48cf-b5d0-54b1830224cf" name="Changes" comment="change to Jpa">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/controleur/DepartementServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/controleur/DepartementServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/modele/DAO/Depatrement_DAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/modele/DAO/Departement_DAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/departement.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/departement.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/etudiant.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/etudiant.jsp" afterDir="false" />
-    </list>
+    <list default="true" id="caf390ae-914c-48cf-b5d0-54b1830224cf" name="Changes" comment="change to Jpa" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -234,6 +228,23 @@
         </option>
       </method>
     </configuration>
+    <configuration default="true" type="com.poratu.idea.plugins.tomcat">
+      <predefined_log_file enabled="true" id="Tomcat Localhost Log" />
+      <predefined_log_file enabled="true" id="Tomcat Access Log" />
+      <predefined_log_file id="Tomcat Catalina Log" />
+      <predefined_log_file id="Tomcat Manager Log" />
+      <predefined_log_file id="Tomcat Host Manager Log" />
+      <option name="tomcatInfo">
+        <TomcatInfo>
+          <option name="name" value="Apache Tomcat/10.1.18" />
+          <option name="path" value="$PROJECT_DIR$/../../../../Program Files/Apache Software Foundation/apache-tomcat-10.1.18-windows-x64/apache-tomcat-10.1.18" />
+          <option name="version" value="10.1.18.0" />
+        </TomcatInfo>
+      </option>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Application.Main" />
       <item itemvalue="Application.Test" />
@@ -333,7 +344,15 @@
       <option name="project" value="LOCAL" />
       <updated>1706541636988</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="change to Jpa">
+      <option name="closed" value="true" />
+      <created>1706987624980</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1706987624980</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -397,9 +416,9 @@
     <MESSAGE value="update servle and add doGet" />
     <MESSAGE value="second commit" />
     <MESSAGE value="ajouter test method" />
-    <MESSAGE value="change to Jpa" />
     <MESSAGE value="update Header.jsp" />
-    <option name="LAST_COMMIT_MESSAGE" value="update Header.jsp" />
+    <MESSAGE value="change to Jpa" />
+    <option name="LAST_COMMIT_MESSAGE" value="change to Jpa" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/gestiondefacultee$All_in_gestionFactulte.ic" NAME="All in gestionFactulte Coverage Results" MODIFIED="1706981148003" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
