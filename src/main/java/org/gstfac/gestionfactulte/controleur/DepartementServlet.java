@@ -5,70 +5,71 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import org.gstfac.gestionfactulte.composit.CompositeDepartment;
+import org.gstfac.gestionfactulte.modele.DAO.DAOImplimentation.DepartementDAOImpl;
+import org.gstfac.gestionfactulte.modele.DAO.Departement_DAO; // Correction du nom du package
+import org.gstfac.gestionfactulte.modele.entity.Departement; // Importation de la classe Departement
 
 import java.io.IOException;
 import java.util.List;
 
 @WebServlet(name = "DepartementServlet", value = "/DepartementServlet")
 public class DepartementServlet extends HttpServlet {
-//    private DepartementDao departementDao;
-//    private CompositeDepartment compositeDepartment;
+    private Departement_DAO departementDAO; // Utilisation du nom de variable en minuscules conformément aux conventions Java
+    private CompositeDepartment compositeDepartment;
 
     @Override
     public void init() throws ServletException {
         super.init();
-//        departementDao = new DepartementDaoImpl();
-//        List<Departement> departments = departementDao.getAll();
-//        compositeDepartment = new CompositeDepartment();
-//        for (Departement department : departments) {
-//            compositeDepartment.addDepartment(department);
-//        }
+        departementDAO = new DepartementDAOImpl();
+        List<Departement> departments = departementDAO.findAll();
+        compositeDepartment = new CompositeDepartment();
+        for (Departement department : departments) {
+            compositeDepartment.addDepartment(department);
+        }
     }
-
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-//        String action = request.getParameter("action");
-//        String idParam = request.getParameter("id");
-//        if (idParam != null && !idParam.isEmpty()) {
-//            int id = Integer.parseInt(idParam);
-//            if ("delete".equals(action)) {
-//                Departement deletedDepartment = departementDao.getById(id);
-//                departementDao.delete(id);
-//                compositeDepartment.removeDepartment(deletedDepartment);
-//            } else {
-//                Departement department = departementDao.getById(id);
-//                request.setAttribute("department", department);
-//            }
-//        }
-//        request.setAttribute("departments",compositeDepartment.getAllDepartments() );
+        String action = request.getParameter("action");
+        String idParam = request.getParameter("id");
+        if (idParam != null && !idParam.isEmpty()) {
+            int id = Integer.parseInt(idParam);
+            if ("delete".equals(action)) {
+                Departement deletedDepartment = departementDAO.findByID(id); // Utilisation du nom de variable en minuscules conformément aux conventions Java
+                departementDAO.deleteByID(id);
+                compositeDepartment.removeDepartment(deletedDepartment); // Utilisation du nom de variable en minuscules conformément aux conventions Java
+            } else {
+                Departement departement = departementDAO.findByID(id);
+                request.setAttribute("departement", departement);
+            }
+        }
+        request.setAttribute("departments", compositeDepartment.getAllDepartments());
         request.getRequestDispatcher("/pages/departement.jsp").forward(request, response);
     }
 
-//    @Override
-//    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-//        String idParam = request.getParameter("id");
-//        String nom = request.getParameter("nom");
-//        if (idParam != null && !idParam.isEmpty()) {
-//            int id = Integer.parseInt(idParam);
-//            Departement existingDepartement = departementDao.getById(id);
-//            if (existingDepartement != null) {
-//                existingDepartement.setNom(nom);
-//                Departement updatedDepartment = departementDao.getById(id);
-//                departementDao.update(existingDepartement);
-//                compositeDepartment.updateDepartment(existingDepartement,updatedDepartment);
-//            } else {
-//                response.setStatus(HttpServletResponse.SC_NOT_FOUND);
-//                return;
-//            }
-//        } else {
-//            Departement newDepartement = new Departement();
-//            newDepartement.setNom(nom);
-//            departementDao.save(newDepartement);
-//            compositeDepartment.addDepartment(newDepartement );
-//        }
-//        request.setAttribute("departments", compositeDepartment.getAllDepartments());
-//        request.getRequestDispatcher("/views/Departement.jsp").forward(request, response);
-//    }
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String idParam = request.getParameter("ID_Departement");
+        String nom = request.getParameter("Nom_Departement");
+        if (idParam != null && !idParam.isEmpty()) {
+            int id = Integer.parseInt(idParam);
+            Departement existingDepartement = departementDAO.findByID(id);
+            if (existingDepartement != null) {
+                existingDepartement.setNom(nom);
+                departementDAO.update(existingDepartement);
+                compositeDepartment.updateDepartment(existingDepartement, existingDepartement);
+            } else {
+                response.setStatus(HttpServletResponse.SC_NOT_FOUND);
+                return;
+            }
+        } else {
+            Departement newDepartement = new Departement();
+            newDepartement.setNom(nom);
+            departementDAO.insert(newDepartement);
+            compositeDepartment.addDepartment(newDepartement);
+        }
+        request.setAttribute("departments", compositeDepartment.getAllDepartments());
+        request.getRequestDispatcher("/pages/Departement.jsp").forward(request, response);
+    }
 }
-
