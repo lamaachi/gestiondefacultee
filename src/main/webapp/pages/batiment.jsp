@@ -56,13 +56,11 @@
             <% FeteAdapter adapteFete = (FeteAdapter) request.getAttribute("adapteFete");
                 SoutenanceAdapter adapteSoutenance = (SoutenanceAdapter) request.getAttribute("adapteSoutenance");
                 if (adapteFete != null) { %>
-            <p>Adapted <Fet></Fet>e:</p>
-            <!-- Display Fete details -->
+            <p class="alert alert-success">Adapted to Fete Events</p>
             <% } else if (adapteSoutenance != null) { %>
-            <p>Adapted Soutenance:</p>
-            <!-- Display Soutenance details -->
+            <p class="alert alert-dark-info">Adapted Soutenance</p>
             <% } else { %>
-            <p>No adaptation selected.</p>
+            <p class="alert alert-danger">No adaptation selected.</p>
             <% } %>
         </div>
     </div>

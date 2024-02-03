@@ -55,7 +55,6 @@ public class BatimentServlet extends HttpServlet {
                 } else {
                     response.getWriter().println("Batiment with ID " + id + " not found.");
                 }
-
             }
             if ("adapt".equals(action)) {
                 Salle salleToAdapt = salleDao.getById(id);
