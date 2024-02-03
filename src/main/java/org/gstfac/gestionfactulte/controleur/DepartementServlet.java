@@ -50,8 +50,8 @@ public class DepartementServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String idParam = request.getParameter("ID_Departement");
-        String nom = request.getParameter("Nom_Departement");
+        String idParam = request.getParameter("id");
+        String nom = request.getParameter("nom");
         if (idParam != null && !idParam.isEmpty()) {
             int id = Integer.parseInt(idParam);
             Departement existingDepartement = departementDAO.findByID(id);
@@ -70,6 +70,6 @@ public class DepartementServlet extends HttpServlet {
             compositeDepartment.addDepartment(newDepartement);
         }
         request.setAttribute("departments", compositeDepartment.getAllDepartments());
-        request.getRequestDispatcher("/pages/Departement.jsp").forward(request, response);
+        request.getRequestDispatcher("/pages/departement.jsp").forward(request, response);
     }
 }

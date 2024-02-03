@@ -1,10 +1,12 @@
-<%@ page import="org.gstfac.gestionfactulte.modele.entity.Departement" %><%--
+<%@ page import="org.gstfac.gestionfactulte.modele.entity.Departement" %>
+<%--
   Created by IntelliJ IDEA.
   User: Tarik
   Date: 29/01/2024
   Time: 18:48
   To change this template use File | Settings | File Templates.
 --%>
+<%@ page import="java.util.List" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -19,11 +21,11 @@
     <h2>Add or Update Department</h2>
     <form action="DepartementServlet" method="post">
         <label for="nom">Department Name:</label>
-        <input type="hidden" name="ID_Departement" id="id"
+        <input type="hidden" name="id" id="id"
                value="<%= request.getAttribute("department") != null ? ((Departement)request.getAttribute("department")).getId() : "" %>">
-        <input type="text" id="nom" name="Non_Departement" placeholder="Enter department name.." required
+        <input type="text" id="nom" name="nom" placeholder="Enter department name.." required
                value="<%= request.getAttribute("department") != null ? ((Departement)request.getAttribute("department")).getNom() : "" %>">
-        <input type="submit" value="Save">
+        <input type="submit" value="Submit">
     </form>
 </div>
 
@@ -32,8 +34,8 @@
     <table style="width: 100%">
         <thead>
         <tr>
-            <th>ID_Departement</th>
-            <th>Non_Departement</th>
+            <th>ID</th>
+            <th>Nom</th>
             <th>Action</th>
         </tr>
         </thead>
