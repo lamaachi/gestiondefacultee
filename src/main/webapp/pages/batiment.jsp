@@ -18,7 +18,7 @@
 </header>
 <main class="container mt-5">
     <div>
-        <h2>Add or Update Batiment</h2>
+        <h2>Ajouter ou Modifier une Batiment</h2>
         <form action="BatimentServlet" method="post">
             <input type="hidden" name="id" id="id"
                    value="<%= request.getAttribute("batiment") != null ? ((Batiment)request.getAttribute("batiment")).getId() : "" %>">
@@ -58,9 +58,9 @@
                 if (adapteFete != null) { %>
             <p class="alert alert-success">Adapted to Fete Events</p>
             <% } else if (adapteSoutenance != null) { %>
-            <p class="alert alert-dark-info">Adapted Soutenance</p>
+            <p class="alert alert-dark-info">Adapter au Soutenance</p>
             <% } else { %>
-            <p class="alert alert-danger">No adaptation selected.</p>
+            <p class="alert alert-danger">Aucun adaptation selectionner.</p>
             <% } %>
         </div>
     </div>
@@ -89,7 +89,7 @@
                 <td><%= salle.getFonctionnalite() %></td>
                 <td><%= salle.getDescription() %></td>
                 <td>
-                    <a href="BatimentServlet?&action=adapt&id=<%= salle.getId() %>" class="btn btn-info">Adapt</a>
+                    <a href="BatimentServlet?&action=adapt&id=<%= salle.getId() %>" class="btn btn-info">Modifier</a>
                     <a href="BatimentServlet?&action=delete&id=<%= salle.getId() %>" class="btn btn-danger">Delete</a>
                 </td>
             </tr>
