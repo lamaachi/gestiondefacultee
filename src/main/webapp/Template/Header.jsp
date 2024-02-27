@@ -31,7 +31,7 @@
 
             <!-- Add Fillier Button -->
             <li class="nav-item">
-                <a class="nav-link" href="#">Fillier</a>
+                <a class="nav-link" href="/gestionFactulte_war_exploded/FiliereServlet">Fillier</a>
             </li>
 
             <!-- Add Messages Button -->
@@ -53,7 +53,7 @@
                      aria-labelledby="dropdownUser">
                     <div class="px-4 pb-0 pt-2">
                         <div class="lh-1">
-                            <h5 class="mb-1">John E. Grainger</h5>
+                            <h5 class="mb-1">Administrateur</h5>
                             <a href="#" class="text-inherit fs-6">View my profile</a>
                         </div>
                         <div class="dropdown-divider mt-3 mb-2"></div>

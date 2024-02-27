@@ -1,4 +1,4 @@
-package org.gstfac.gestionfactulte.Adapter;
+package org.gstfac.gestionfactulte.AdapterPattern;
 
 import org.gstfac.gestionfactulte.emuns.Fonctionnalite;
 import org.gstfac.gestionfactulte.modele.entity.Batiment;
