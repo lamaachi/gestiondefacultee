@@ -10,41 +10,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="caf390ae-914c-48cf-b5d0-54b1830224cf" name="Changes" comment="finish departement">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/Patterns/controleurPattern/HomeServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/modele/DAO/diagrame.puml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/AdapterPattern/FeteAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/Patterns/AdapterPattern/Fete_Adapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/AdapterPattern/SoutenanceAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/Patterns/AdapterPattern/Soutenance_Adapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/Factory/AdministarteurFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/Patterns/FactoryPattern/AdministarteurFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/Factory/AmphiFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/Patterns/FactoryPattern/AmphiFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/Factory/Batimentfactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/Patterns/FactoryPattern/Batimentfactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/Factory/ChefDepartementFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/Patterns/FactoryPattern/ChefDepartementFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/Factory/DoyenFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/Patterns/FactoryPattern/DoyenFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/Factory/EnseignantFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/Patterns/FactoryPattern/EnseignantFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/Factory/PersonnelFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/Patterns/FactoryPattern/PersonnelFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/Factory/SalleFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/Patterns/FactoryPattern/SalleFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/composit/CompositeDepartment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/Patterns/compositPattern/CompositeDepartment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/composit/DepartmentComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/Patterns/compositPattern/DepartmentComponent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/controleur/BatimentServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/Patterns/controleurPattern/BatimentServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/controleur/DepartementServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/Patterns/controleurPattern/DepartementServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/controleur/EtudiantServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/Patterns/controleurPattern/EtudiantServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/controleur/FiliereServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/Patterns/controleurPattern/FiliereServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/controleur/HomeServlet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/controleur/LoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/Patterns/controleurPattern/LoginServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/controleur/MessagesServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/Patterns/controleurPattern/MessagesServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/controleur/PersonnelServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/Patterns/controleurPattern/PersonnelServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/controleur/SectionServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/Patterns/controleurPattern/SectionServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/emuns/Fonctionnalite.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/modele/emuns/Fonctionnalite.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/mediator/ChefDepartementMediator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/Patterns/mediatorPatten/ChefDepartementMediator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/mediator/ChefDepartementMediatorImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/Patterns/mediatorPatten/ChefDepartementMediatorImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/modele/entity/Amphi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/modele/entity/Amphi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/modele/entity/Batiment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/modele/entity/Batiment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/modele/entity/Departement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/modele/entity/Departement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/modele/entity/Salle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/modele/entity/Salle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/batiment.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/batiment.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/departement.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/departement.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/Patterns/controleurPattern/BatimentServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/controleur/BatimentServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/Patterns/controleurPattern/DepartementServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/controleur/DepartementServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/Patterns/controleurPattern/EtudiantServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/controleur/EtudiantServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/Patterns/controleurPattern/FiliereServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/controleur/FiliereServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/Patterns/controleurPattern/HomeServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/controleur/HomeServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/Patterns/controleurPattern/LoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/controleur/LoginServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/Patterns/controleurPattern/MessagesServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/controleur/MessagesServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/Patterns/controleurPattern/PersonnelServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/controleur/PersonnelServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/Patterns/controleurPattern/SectionServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/gstfac/gestionfactulte/controleur/SectionServlet.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -364,7 +339,7 @@
       <workItem from="1706544403115" duration="2329000" />
       <workItem from="1709050885169" duration="2309000" />
       <workItem from="1709053237366" duration="1540000" />
-      <workItem from="1709196942553" duration="318000" />
+      <workItem from="1709196942553" duration="5183000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <option name="closed" value="true" />
@@ -446,7 +421,15 @@
       <option name="project" value="LOCAL" />
       <updated>1706989060870</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="finish departement">
+      <option name="closed" value="true" />
+      <created>1709197945389</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1709197945389</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

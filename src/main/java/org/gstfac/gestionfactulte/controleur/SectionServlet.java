@@ -1,4 +1,4 @@
-package org.gstfac.gestionfactulte.Patterns.controleurPattern;
+package org.gstfac.gestionfactulte.controleur;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
