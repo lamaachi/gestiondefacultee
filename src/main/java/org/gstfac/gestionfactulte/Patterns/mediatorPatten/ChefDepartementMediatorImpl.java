@@ -1,11 +1,8 @@
-package org.gstfac.gestionfactulte.mediator;
+package org.gstfac.gestionfactulte.Patterns.mediatorPatten;
 
-import org.gstfac.gestionfactulte.modele.DAO.Message_DAO;
-import org.gstfac.gestionfactulte.modele.DAO.Personnel_DAO;
 import org.gstfac.gestionfactulte.modele.entity.ChefDepartement;
 import org.gstfac.gestionfactulte.modele.entity.Message;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class ChefDepartementMediatorImpl implements  ChefDepartementMediator{

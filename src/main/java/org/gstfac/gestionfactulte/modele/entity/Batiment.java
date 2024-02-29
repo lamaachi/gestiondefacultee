@@ -1,5 +1,5 @@
 package org.gstfac.gestionfactulte.modele.entity;
-import org.gstfac.gestionfactulte.emuns.Fonctionnalite;
+import org.gstfac.gestionfactulte.modele.emuns.Fonctionnalite;
 
 public interface Batiment {
     int getId();

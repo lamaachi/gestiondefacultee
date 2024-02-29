@@ -1,6 +1,6 @@
-package org.gstfac.gestionfactulte.Factory;
+package org.gstfac.gestionfactulte.Patterns.FactoryPattern;
 
-import org.gstfac.gestionfactulte.emuns.Fonctionnalite;
+import org.gstfac.gestionfactulte.modele.emuns.Fonctionnalite;
 import org.gstfac.gestionfactulte.modele.entity.Amphi;
 import org.gstfac.gestionfactulte.modele.entity.Batiment;
 

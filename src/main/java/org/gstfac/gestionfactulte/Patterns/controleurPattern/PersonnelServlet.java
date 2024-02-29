@@ -1,4 +1,4 @@
-package org.gstfac.gestionfactulte.controleur;
+package org.gstfac.gestionfactulte.Patterns.controleurPattern;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
@@ -7,7 +7,6 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
-import java.util.List;
 
 @WebServlet(name = "PersonnelServlet", value = "/PersonnelServlet")
 public class PersonnelServlet extends HttpServlet {

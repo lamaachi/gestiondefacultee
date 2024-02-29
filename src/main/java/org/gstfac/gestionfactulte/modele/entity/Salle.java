@@ -1,7 +1,7 @@
 package org.gstfac.gestionfactulte.modele.entity;
 
 import jakarta.persistence.*;
-import org.gstfac.gestionfactulte.emuns.Fonctionnalite;
+import org.gstfac.gestionfactulte.modele.emuns.Fonctionnalite;
 
 @Entity
 public class Salle implements Batiment{

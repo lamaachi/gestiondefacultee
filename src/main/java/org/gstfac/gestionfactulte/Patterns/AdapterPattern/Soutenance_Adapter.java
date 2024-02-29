@@ -1,13 +1,13 @@
-package org.gstfac.gestionfactulte.AdapterPattern;
+package org.gstfac.gestionfactulte.Patterns.AdapterPattern;
 
-import org.gstfac.gestionfactulte.emuns.Fonctionnalite;
+import org.gstfac.gestionfactulte.modele.emuns.Fonctionnalite;
 import org.gstfac.gestionfactulte.modele.entity.Amphi;
 import org.gstfac.gestionfactulte.modele.entity.Batiment;
 
-public class SoutenanceAdapter implements Batiment {
+public class Soutenance_Adapter implements Batiment {
     Amphi amphi;
 
-    public SoutenanceAdapter(Amphi amphi) {
+    public Soutenance_Adapter(Amphi amphi) {
         this.amphi = amphi;
     }
 
@@ -52,7 +52,7 @@ public class SoutenanceAdapter implements Batiment {
     }
 
     @Override
-    public String getDescription() {
+    public  String getDescription() {
         return amphi.getDescription();
     }
 

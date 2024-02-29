@@ -1,7 +1,7 @@
 package org.gstfac.gestionfactulte.modele.entity;
 
 import jakarta.persistence.*;
-import org.gstfac.gestionfactulte.composit.DepartmentComponent;
+import org.gstfac.gestionfactulte.Patterns.compositPattern.DepartmentComponent;
 
 import java.util.List;
 

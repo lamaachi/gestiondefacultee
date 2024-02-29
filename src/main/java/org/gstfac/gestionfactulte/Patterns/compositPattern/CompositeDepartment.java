@@ -1,4 +1,4 @@
-package org.gstfac.gestionfactulte.composit;
+package org.gstfac.gestionfactulte.Patterns.compositPattern;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -39,3 +39,5 @@ public class CompositeDepartment implements DepartmentComponent {
         return result.toString();
     }
 }
+
+

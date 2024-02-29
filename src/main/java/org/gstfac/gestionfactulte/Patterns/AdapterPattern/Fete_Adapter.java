@@ -1,13 +1,13 @@
-package org.gstfac.gestionfactulte.AdapterPattern;
+package org.gstfac.gestionfactulte.Patterns.AdapterPattern;
 
-import org.gstfac.gestionfactulte.emuns.Fonctionnalite;
+import org.gstfac.gestionfactulte.modele.emuns.Fonctionnalite;
 import org.gstfac.gestionfactulte.modele.entity.Batiment;
 import org.gstfac.gestionfactulte.modele.entity.Salle;
 
-public class FeteAdapter implements Batiment {
+public class Fete_Adapter implements Batiment {
     Salle salle;
 
-    public FeteAdapter(Salle salle) {
+    public Fete_Adapter(Salle salle) {
         this.salle = salle;
     }
 

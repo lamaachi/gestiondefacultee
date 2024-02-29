@@ -1,11 +1,11 @@
-package org.gstfac.gestionfactulte.controleur;
+package org.gstfac.gestionfactulte.Patterns.controleurPattern;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import org.gstfac.gestionfactulte.composit.CompositeDepartment;
+import org.gstfac.gestionfactulte.Patterns.compositPattern.CompositeDepartment;
 import org.gstfac.gestionfactulte.modele.DAO.DAOImplimentation.DepartementDAOImpl;
 import org.gstfac.gestionfactulte.modele.DAO.Departement_DAO; // Correction du nom du package
 import org.gstfac.gestionfactulte.modele.entity.Departement; // Importation de la classe Departement

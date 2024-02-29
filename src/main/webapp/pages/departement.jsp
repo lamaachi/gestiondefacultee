@@ -49,9 +49,8 @@
             <td><%= department.getId() %></td>
             <td><%= department.getNom() %></td>
             <td>
-                <a href="DepartementServlet?id=<%= department.getId() %>" class="btn btn-warning">Edit</a>
-                <a href="DepartementServlet?action=delete&id=<%= department.getId() %>"
-                   class="btn btn-danger">Delete</a>
+<%--            <a href="DepartementServlet?id=<%= department.getId() %>" class="btn btn-warning">Edit</a>--%>
+                <a href="DepartementServlet?action=delete&id=<%= department.getId() %>" class="btn btn-danger">Delete</a>
             </td>
         </tr>
         <% }

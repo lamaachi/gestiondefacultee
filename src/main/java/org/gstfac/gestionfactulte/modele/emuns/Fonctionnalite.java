@@ -1,4 +1,4 @@
-package org.gstfac.gestionfactulte.emuns;
+package org.gstfac.gestionfactulte.modele.emuns;
 
 public enum Fonctionnalite {
     AMPHI,

@@ -1,7 +1,7 @@
-<%@ page import="org.gstfac.gestionfactulte.emuns.Fonctionnalite" %>
+<%@ page import="org.gstfac.gestionfactulte.modele.emuns.Fonctionnalite" %>
 <%@ page import="org.gstfac.gestionfactulte.modele.entity.Batiment" %>
-<%@ page import="org.gstfac.gestionfactulte.AdapterPattern.FeteAdapter" %>
-<%@ page import="org.gstfac.gestionfactulte.AdapterPattern.SoutenanceAdapter" %>
+<%@ page import="org.gstfac.gestionfactulte.AdapterPattern.Fete_Adapter" %>
+<%@ page import="org.gstfac.gestionfactulte.AdapterPattern.Soutenance_Adapter" %>
 <%@ page import="org.gstfac.gestionfactulte.modele.entity.Salle" %>
 <%@ page import="java.util.List" %>
 <%@ page import="org.gstfac.gestionfactulte.modele.entity.Amphi" %>
@@ -53,8 +53,8 @@
 
         <h2>Adapter</h2>
         <div>
-            <% FeteAdapter adapteFete = (FeteAdapter) request.getAttribute("adapteFete");
-                SoutenanceAdapter adapteSoutenance = (SoutenanceAdapter) request.getAttribute("adapteSoutenance");
+            <% Fete_Adapter adapteFete = (Fete_Adapter) request.getAttribute("adapteFete");
+                Soutenance_Adapter adapteSoutenance = (Soutenance_Adapter) request.getAttribute("adapteSoutenance");
                 if (adapteFete != null) { %>
             <p class="alert alert-success">Adapted to Fete Events</p>
             <% } else if (adapteSoutenance != null) { %>

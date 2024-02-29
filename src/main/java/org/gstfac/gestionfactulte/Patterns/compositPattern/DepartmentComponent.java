@@ -1,5 +1,7 @@
-package org.gstfac.gestionfactulte.composit;
+package org.gstfac.gestionfactulte.Patterns.compositPattern;
 
 public interface DepartmentComponent {
     String AfficherDepartement();
 }
+
+

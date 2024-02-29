@@ -1,4 +1,4 @@
-package org.gstfac.gestionfactulte.controleur;
+package org.gstfac.gestionfactulte.Patterns.controleurPattern;
 
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
@@ -6,11 +6,11 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import org.gstfac.gestionfactulte.AdapterPattern.FeteAdapter;
-import org.gstfac.gestionfactulte.AdapterPattern.SoutenanceAdapter;
-import org.gstfac.gestionfactulte.Factory.AmphiFactory;
-import org.gstfac.gestionfactulte.Factory.Batimentfactory;
-import org.gstfac.gestionfactulte.Factory.SalleFactory;
+import org.gstfac.gestionfactulte.Patterns.AdapterPattern.Fete_Adapter;
+import org.gstfac.gestionfactulte.Patterns.AdapterPattern.Soutenance_Adapter;
+import org.gstfac.gestionfactulte.Patterns.FactoryPattern.AmphiFactory;
+import org.gstfac.gestionfactulte.Patterns.FactoryPattern.Batimentfactory;
+import org.gstfac.gestionfactulte.Patterns.FactoryPattern.SalleFactory;
 import org.gstfac.gestionfactulte.modele.DAO.AmphiDAO;
 import org.gstfac.gestionfactulte.modele.DAO.DAOImplimentation.AmphiDAOImpl;
 import org.gstfac.gestionfactulte.modele.DAO.DAOImplimentation.SalleDaoImp;
@@ -26,8 +26,8 @@ import java.util.List;
 public class BatimentServlet extends HttpServlet {
     private SalleDAO salleDao;
     private AmphiDAO amphiDao;
-    private FeteAdapter feteAdapter;
-    private SoutenanceAdapter soutenanceAdapter;
+    private Fete_Adapter feteAdapter;
+    private Soutenance_Adapter soutenanceAdapter;
 
     @Override
     public void init() throws ServletException {
@@ -60,10 +60,10 @@ public class BatimentServlet extends HttpServlet {
                 Salle salleToAdapt = salleDao.getById(id);
                 Amphi amphiToToadapt = amphiDao.getById(id);
                 if (salleToAdapt != null) {
-                    FeteAdapter feteAdapter = new FeteAdapter(salleToAdapt);
+                    Fete_Adapter feteAdapter = new Fete_Adapter(salleToAdapt);
                     request.setAttribute("adapteFete", feteAdapter);
                 } else if (amphiToToadapt != null) {
-                    SoutenanceAdapter soutenanceAdapter = new SoutenanceAdapter(amphiToToadapt);
+                    Soutenance_Adapter soutenanceAdapter = new Soutenance_Adapter(amphiToToadapt);
                     request.setAttribute("adapteSoutenance", soutenanceAdapter);
                 } else {
                     response.getWriter().println("Batiment with ID " + id + " not found.");

@@ -1,4 +1,4 @@
-package org.gstfac.gestionfactulte.mediator;
+package org.gstfac.gestionfactulte.Patterns.mediatorPatten;
 
 import org.gstfac.gestionfactulte.modele.entity.ChefDepartement;
 import org.gstfac.gestionfactulte.modele.entity.Message;

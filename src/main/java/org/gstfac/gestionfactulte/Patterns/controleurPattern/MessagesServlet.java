@@ -1,11 +1,10 @@
-package org.gstfac.gestionfactulte.controleur;
+package org.gstfac.gestionfactulte.Patterns.controleurPattern;
 
 import jakarta.servlet.*;
 import jakarta.servlet.http.*;
 import jakarta.servlet.annotation.*;
 
 import java.io.IOException;
-import java.util.List;
 
 @WebServlet(name = "MessagesServlet", value = "/MessagesServlet")
 public class MessagesServlet extends HttpServlet {
