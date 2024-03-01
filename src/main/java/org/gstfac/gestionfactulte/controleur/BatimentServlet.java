@@ -1,6 +1,5 @@
 package org.gstfac.gestionfactulte.controleur;
 
-import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -53,7 +52,7 @@ public class BatimentServlet extends HttpServlet {
                 } else if (amphiToDelete != null) {
                     amphiDao.delete(id);
                 } else {
-                    response.getWriter().println("Batiment with ID " + id + " not found.");
+                    response.getWriter().println("Batiment with ID " + id + " n'/est pas trouver.");
                 }
             }
             if ("adapt".equals(action)) {
@@ -66,7 +65,7 @@ public class BatimentServlet extends HttpServlet {
                     Soutenance_Adapter soutenanceAdapter = new Soutenance_Adapter(amphiToToadapt);
                     request.setAttribute("adapteSoutenance", soutenanceAdapter);
                 } else {
-                    response.getWriter().println("Batiment with ID " + id + " not found.");
+                    response.getWriter().println("Batiment with ID " + id + " n'/est pas trouver.");
                 }
 
             } else {
@@ -77,7 +76,7 @@ public class BatimentServlet extends HttpServlet {
                 } else if (amphi != null) {
                     batiment = amphi;
                 } else {
-                    response.getWriter().println("Batiment with ID " + id + " not found.");
+                    response.getWriter().println("Batiment with ID " + id + " n'/est pas trouver.");
                 }
             }
         }
@@ -86,8 +85,7 @@ public class BatimentServlet extends HttpServlet {
         request.setAttribute("batiment", batiment);
         request.setAttribute("salles", salles);
         request.setAttribute("amphis", amphis);
-        RequestDispatcher dispatcher = request.getRequestDispatcher("/pages/batiment.jsp");
-        dispatcher.forward(request, response);
+        request.getRequestDispatcher("/pages/batiment.jsp").forward(request, response);
     }
 
     @Override
@@ -110,7 +108,7 @@ public class BatimentServlet extends HttpServlet {
                 break;
             default:
                 response.setStatus(HttpServletResponse.SC_BAD_REQUEST);
-                response.getWriter().println("Invalid batiment type.");
+                response.getWriter().println("Type invalid.");
                 return;
         }
         batiment = batimentFactory.createBatiment();
@@ -128,6 +126,5 @@ public class BatimentServlet extends HttpServlet {
         request.setAttribute("salles", salles);
         request.setAttribute("amphis", amphis);
         request.getRequestDispatcher("/pages/batiment.jsp").forward(request, response);
-//        request.getRequestDispatcher("/pages/batiment.jsp").forward(request, response);
     }
 }

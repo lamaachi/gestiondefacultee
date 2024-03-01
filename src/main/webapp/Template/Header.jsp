@@ -1,12 +1,23 @@
+<style>
+    .logo-app-web {
+        max-width: 60px; /* ou toute autre taille souhaitée */
+        height: auto;
+    }
+</style>
 <div class="header @@classList">
     <!-- navbar -->
     <nav class="navbar-classic navbar navbar-expand-lg">
         <!-- Navbar nav -->
+        <a class="navbar-brand" href="/gestionFactulte_war_exploded/HomePage.jsp">
+            <img src="logo_logo.jpg" alt="Logo Faculté 1" class="logo-app-web rounded-circle">
+            Gestion Faculte
+        </a>
+
         <ul class="navbar-nav navbar-right-wrap ms-auto d-flex nav-top-wrap">
             <!-- List -->
             <!-- Add Batiments Button -->
             <li class="nav-item">
-                <a class="nav-link" href="/gestionFactulte_war_exploded/BatimentServlet">Batiments</a>
+                <a class="nav-link" href="/gestionFactulte_war_exploded/BatimentServlet">Batiment</a>
             </li>
 
             <!-- Add Departement Button -->
@@ -16,28 +27,28 @@
 
             <!-- Add Etudiants Button -->
             <li class="nav-item">
-                <a class="nav-link" href="#">Etudiants</a>
+                <a class="nav-link" href="/gestionFactulte_war_exploded/EtudiantServlet">Etudiant</a>
             </li>
 
             <!-- Add Personnel Button -->
             <li class="nav-item">
-                <a class="nav-link" href="#">Personnel</a>
+                <a class="nav-link" href="/gestionFactulte_war_exploded/PersonnelServlet">Personne</a>
             </li>
 
             <!-- Add Section Button -->
             <li class="nav-item">
-                <a class="nav-link" href="#">Section</a>
+                <a class="nav-link" href="/gestionFactulte_war_exploded/SectionServlet">Section</a>
             </li>
 
             <!-- Add Fillier Button -->
             <li class="nav-item">
-                <a class="nav-link" href="/gestionFactulte_war_exploded/FiliereServlet">Fillier</a>
+                <a class="nav-link" href="/gestionFactulte_war_exploded/FiliereServlet">Filiere</a>
             </li>
 
-            <!-- Add Messages Button -->
-            <li class="nav-item">
-                <a class="nav-link" href="#">Messages</a>
-            </li>
+<%--            <!-- Add Messages Button -->--%>
+<%--            <li class="nav-item">--%>
+<%--                <a class="nav-link" href="/gestionFactulte_war_exploded/MessagesServlet">Messages</a>--%>
+<%--            </li>--%>
 
             <!-- User Dropdown -->
             <li class="dropdown ms-2">

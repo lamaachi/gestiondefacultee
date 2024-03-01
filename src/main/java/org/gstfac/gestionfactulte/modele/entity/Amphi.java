@@ -5,7 +5,7 @@ import jakarta.persistence.*;
 import org.gstfac.gestionfactulte.modele.emuns.Fonctionnalite;
 
 @Entity
-public class Amphi implements Batiment{
+public class Amphi extends Batiment{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;

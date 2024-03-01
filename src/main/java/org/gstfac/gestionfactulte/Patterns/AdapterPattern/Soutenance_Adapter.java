@@ -4,7 +4,7 @@ import org.gstfac.gestionfactulte.modele.emuns.Fonctionnalite;
 import org.gstfac.gestionfactulte.modele.entity.Amphi;
 import org.gstfac.gestionfactulte.modele.entity.Batiment;
 
-public class Soutenance_Adapter implements Batiment {
+public class Soutenance_Adapter extends Batiment {
     Amphi amphi;
 
     public Soutenance_Adapter(Amphi amphi) {

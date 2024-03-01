@@ -12,7 +12,7 @@
     <!-- Servlet Mapping -->
     <servlet>
         <servlet-name>BatimentServlet</servlet-name>
-        <servlet-class>org.gstfac.gestionfactulte.controleurPattern.BatimentServlet</servlet-class>
+        <servlet-class>org.gstfac.gestionfactulte.controleur.BatimentServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
@@ -22,12 +22,39 @@
 
     <servlet>
         <servlet-name>FiliereServlet</servlet-name>
-        <servlet-class>org.gstfac.gestionfactulte.controleurPattern.FiliereServlet</servlet-class>
+        <servlet-class>org.gstfac.gestionfactulte.controleur.FiliereServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
         <servlet-name>FiliereServlet</servlet-name>
         <url-pattern>/FiliereServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>EtudiantServlet</servlet-name>
+        <servlet-class>org.gstfac.gestionfactulte.controleur.EtudiantServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>EtudiantServlet</servlet-name>
+        <url-pattern>/EtudiantServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>DepartementServlet</servlet-name>
+        <servlet-class>org.gstfac.gestionfactulte.controleur.DepartementServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DepartementServlet</servlet-name>
+        <url-pattern>/DepartementServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>PersonnelServlet</servlet-name>
+        <servlet-class>org.gstfac.gestionfactulte.controleur.PersonnelServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>PersonnelServlet</servlet-name>
+        <url-pattern>/PersonnelServlet</url-pattern>
     </servlet-mapping>
 
 </web-app>

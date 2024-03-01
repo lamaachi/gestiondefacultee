@@ -2,12 +2,12 @@ package org.gstfac.gestionfactulte.modele.DAO;
 
 import org.gstfac.gestionfactulte.modele.entity.Section;
 
-import java.util.ArrayList;
+import java.util.List;
+
 public interface Section_DAO {
-    ArrayList<Section> findAll();
-    Section findByID(int ID_Section);
-    void insert(Section section);
+    void save(Section section);
+    Section getById(int id);
+    List<Section> getAll();
     void update(Section section);
-    void deleteByID(int ID_Section);
-    void deleteByCIN(int ID_Section);
+    void delete(int id);
 }

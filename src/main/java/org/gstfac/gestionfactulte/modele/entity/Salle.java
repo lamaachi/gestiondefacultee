@@ -4,7 +4,7 @@ import jakarta.persistence.*;
 import org.gstfac.gestionfactulte.modele.emuns.Fonctionnalite;
 
 @Entity
-public class Salle implements Batiment{
+public class Salle extends Batiment{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;

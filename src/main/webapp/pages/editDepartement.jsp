@@ -1,5 +1,4 @@
 <%@ page import="org.gstfac.gestionfactulte.modele.entity.Departement" %>
-<%@ page import="java.util.List" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -20,13 +19,13 @@
     <form action="DepartementServlet" method="post">
         <div class="form-group">
             <label for="nom">Department Name:</label>
-            <input type="hidden" name="action" value="edit"> <!-- Indiquer l'action d'édition -->
-            <input type="hidden" name="id" value="<%= request.getParameter("id") %>"> <!-- ID du département -->
+            <input type="hidden" name="action" value="edit">
+            <input type="hidden" name="id" value="<%= request.getAttribute("department") != null ? ((Departement)request.getAttribute("department")).getId() : "" %>">
             <input type="text" id="nom" name="nom" placeholder="Enter department name.." required
                    value="<%= request.getAttribute("department") != null ? ((Departement)request.getAttribute("department")).getNom() : "" %>"
                    class="form-control">
         </div>
-        <button type="submit" class="btn btn-primary">Update</button> <!-- Bouton pour mettre à jour -->
+        <button type="submit" class="btn btn-primary">Update</button>
     </form>
 </div>
 

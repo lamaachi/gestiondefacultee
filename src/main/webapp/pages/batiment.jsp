@@ -1,7 +1,7 @@
 <%@ page import="org.gstfac.gestionfactulte.modele.emuns.Fonctionnalite" %>
 <%@ page import="org.gstfac.gestionfactulte.modele.entity.Batiment" %>
-<%@ page import="org.gstfac.gestionfactulte.AdapterPattern.Fete_Adapter" %>
-<%@ page import="org.gstfac.gestionfactulte.AdapterPattern.Soutenance_Adapter" %>
+<%@ page import="org.gstfac.gestionfactulte.Patterns.AdapterPattern.Fete_Adapter" %>
+<%@ page import="org.gstfac.gestionfactulte.Patterns.AdapterPattern.Soutenance_Adapter" %>
 <%@ page import="org.gstfac.gestionfactulte.modele.entity.Salle" %>
 <%@ page import="java.util.List" %>
 <%@ page import="org.gstfac.gestionfactulte.modele.entity.Amphi" %>
@@ -9,7 +9,7 @@
 <html lang="en">
 <head>
     <%@ include file="../Template/Head.jsp" %>
-    <title>Title</title>
+    <title>Batiment</title>
 
 </head>
 <body>
@@ -18,7 +18,7 @@
 </header>
 <main class="container mt-5">
     <div>
-        <h2>Ajouter ou Modifier une Batiment</h2>
+        <h2>Ajouter ou faire une modification sur la liste des Batiments</h2>
         <form action="BatimentServlet" method="post">
             <input type="hidden" name="id" id="id"
                    value="<%= request.getAttribute("batiment") != null ? ((Batiment)request.getAttribute("batiment")).getId() : "" %>">
@@ -48,7 +48,7 @@
                        value="<%= request.getAttribute("batiment") != null ? ((Batiment)request.getAttribute("batiment")).getDescription() : "" %>">
             </div>
 
-            <input type="submit" class="btn btn-primary" value="Save">
+            <input type="submit" class="btn btn-primary" value="Submit">
         </form>
 
         <h2>Adapter</h2>
@@ -56,21 +56,20 @@
             <% Fete_Adapter adapteFete = (Fete_Adapter) request.getAttribute("adapteFete");
                 Soutenance_Adapter adapteSoutenance = (Soutenance_Adapter) request.getAttribute("adapteSoutenance");
                 if (adapteFete != null) { %>
-            <p class="alert alert-success">Adapted to Fete Events</p>
+            <p class="alert alert-success">Adapter pour un evenement de fete</p>
             <% } else if (adapteSoutenance != null) { %>
             <p class="alert alert-dark-info">Adapter au Soutenance</p>
             <% } else { %>
-            <p class="alert alert-danger">Aucun adaptation selectionner.</p>
+            <p class="alert alert-danger">Aucune adaptation selectionner.</p>
             <% } %>
         </div>
     </div>
 
     <aside id="customers" class="mt-5">
-        <h2>Batiments</h2>
+        <h2>La liste des Batiments</h2>
         <table class="table">
             <thead class="thead-dark">
             <tr>
-                <th>ID</th>
                 <th>Emplacement</th>
                 <th>Taille</th>
                 <th>Fonctionnalite</th>
@@ -83,13 +82,12 @@
                 if (salles != null && !salles.isEmpty()) {
                     for (Salle salle : salles) { %>
             <tr>
-                <td><%= salle.getId() %></td>
                 <td><%= salle.getEmplacement() %></td>
                 <td><%= salle.getTaille() %></td>
                 <td><%= salle.getFonctionnalite() %></td>
                 <td><%= salle.getDescription() %></td>
                 <td>
-                    <a href="BatimentServlet?&action=adapt&id=<%= salle.getId() %>" class="btn btn-info">Modifier</a>
+                    <a href="BatimentServlet?&action=adapt&id=<%= salle.getId() %>" class="btn btn-info">Adapter</a>
                     <a href="BatimentServlet?&action=delete&id=<%= salle.getId() %>" class="btn btn-danger">Delete</a>
                 </td>
             </tr>
@@ -100,13 +98,12 @@
                 if (amphis != null && !amphis.isEmpty()) {
                     for (Amphi amphi : amphis) { %>
             <tr>
-                <td><%= amphi.getId() %></td>
                 <td><%= amphi.getEmplacement() %></td>
                 <td><%= amphi.getTaille() %></td>
                 <td><%= amphi.getFonctionnalite() %></td>
                 <td><%= amphi.getDescription() %></td>
                 <td>
-                    <a href="BatimentServlet?&action=adapt&id=<%= amphi.getId() %>" class="btn btn-info">Adapt</a>
+                    <a href="BatimentServlet?&action=adapt&id=<%= amphi.getId() %>" class="btn btn-info">Adapter</a>
                     <a href="BatimentServlet?&action=delete&id=<%= amphi.getId() %>" class="btn btn-danger">Delete</a>
                 </td>
             </tr>

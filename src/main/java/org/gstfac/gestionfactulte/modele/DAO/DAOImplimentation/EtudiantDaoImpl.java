@@ -9,53 +9,42 @@ import org.gstfac.gestionfactulte.modele.DAO.JDBCSingleton;
 import java.util.List;
 
 public class EtudiantDaoImpl implements Etudiant_DAO {
-	private final EntityManager entityManager;
+		private final EntityManager entityManager;
 
-	public EtudiantDaoImpl() {
-		entityManager = JDBCSingleton.getEntityManagerFactory().createEntityManager();
+		public EtudiantDaoImpl() {
+			entityManager = EntityManagerFactorySingleton.getEntityManagerFactory().createEntityManager();
+		}
+
+		@Override
+		public void insert(Etudiant etudiant) {
+			entityManager.getTransaction().begin();
+			entityManager.persist(etudiant);
+			entityManager.getTransaction().commit();
+		}
+
+		@Override
+		public Etudiant findById(Long id) {
+			return entityManager.find(Etudiant.class, id);
+		}
+
+		@Override
+		public List<Etudiant> findAll() {
+			Query query = entityManager.createQuery("SELECT e FROM Etudiant e");
+			return query.getResultList();
+		}
+
+		@Override
+		public void update(Etudiant etudiant) {
+			entityManager.getTransaction().begin();
+			entityManager.merge(etudiant);
+			entityManager.getTransaction().commit();
+		}
+
+		@Override
+		public void delete(Long id) {
+			Etudiant etudiant = findById(id);
+			entityManager.getTransaction().begin();
+			entityManager.remove(etudiant);
+			entityManager.getTransaction().commit();
+		}
 	}
-
-    @Override
-	public void save(Etudiant etudiant) {
-		entityManager.getTransaction().begin();
-		entityManager.persist(etudiant);
-		entityManager.getTransaction().commit();
-	}
-
-	@Override
-	public void update(Etudiant etd) {
-		entityManager.getTransaction().begin();
-		entityManager.merge(etd);
-		entityManager.getTransaction().commit();
-	}
-
-	@Override
-	public Etudiant getByCNE(String cne) {
-		return entityManager.find(Etudiant.class, cne);
-	}
-
-	@Override
-	public void deleteByCNE(String cne) {
-		Etudiant etudiant = getByCNE(cne);
-		entityManager.getTransaction().begin();
-		entityManager.remove(etudiant);
-		entityManager.getTransaction().commit();
-	}
-
-	@Override
-	public void test() {
-
-	}
-
-
-	@Override
-	public List<Etudiant> getAll() {
-		Query query = entityManager.createQuery("SELECT e FROM Etudiant e");
-		return query.getResultList();
-	}
-
-
-
-
-
-}

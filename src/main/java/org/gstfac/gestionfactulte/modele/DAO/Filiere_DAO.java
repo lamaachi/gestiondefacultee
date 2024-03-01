@@ -4,7 +4,7 @@ import org.gstfac.gestionfactulte.modele.entity.Filiere;
 
 import java.util.List;
 
-public interface FillierDAO {
+public interface Filiere_DAO {
     void save(Filiere Filiere);
     Filiere getById(int id);
     List<Filiere> getAll();

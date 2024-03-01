@@ -1,3 +1,10 @@
+<%--
+  Created by IntelliJ IDEA.
+  User: Tarik
+  Date: 30/01/2024
+  Time: 14:02
+  To change this template use File | Settings | File Templates.
+--%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ page import="java.util.List" %>
 <%@ page import="org.gstfac.gestionfactulte.modele.entity.Filiere" %>
@@ -15,7 +22,7 @@
 <main class="container mt-5">
     <div class="row">
         <div class="col-md-6">
-            <h2>Add or Update Filiere</h2>
+            <h2>Ajouter ou modifier un Filiere</h2>
             <form action="FiliereServlet" method="post">
                 <div class="form-group">
                     <label for="nom">Filiere Name:</label>
@@ -37,17 +44,16 @@
                         } %>
                     </select>
                 </div>
-                <input type="submit" value="Save" class="btn btn-primary">
+                <input type="submit" value="Submit" class="btn btn-primary">
             </form>
         </div>
     </div>
 
     <aside class="mt-5">
-        <h2>Filieres List</h2>
+        <h2>La liste des filieres</h2>
         <table class="table">
             <thead class="thead-dark">
             <tr>
-                <th>ID</th>
                 <th>Nom</th>
                 <th>Departement</th>
                 <th>Action</th>
@@ -58,7 +64,6 @@
                 if (filieres != null && !filieres.isEmpty()) {
                     for (Filiere filiere : filieres) { %>
             <tr>
-                <td><%= filiere.getId() %></td>
                 <td><%= filiere.getNom() %></td>
                 <td><%= filiere.getDepartement().getNom() %></td>
                 <td>
@@ -69,7 +74,7 @@
             <% }
             } else { %>
             <tr>
-                <td colspan="4"><h1>No data found</h1></td>
+                <td colspan="4"><h1>Aucune donnees</h1></td>
             </tr>
             <% } %>
             </tbody>

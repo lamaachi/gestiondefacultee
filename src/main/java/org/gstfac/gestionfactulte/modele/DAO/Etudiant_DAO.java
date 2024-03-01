@@ -6,11 +6,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public interface Etudiant_DAO {
-	List<Etudiant> getAll();
-	Etudiant getByCNE(String cne);
-	void save(Etudiant etd);
-	void update(Etudiant etd);
-	void deleteByCNE(String CNE);
-	void test();
-}
+		void insert(Etudiant etudiant);
+		Etudiant findById(Long id);
+		List<Etudiant> findAll();
+		void update(Etudiant etudiant);
+		void delete(Long id);
+	}
+
 

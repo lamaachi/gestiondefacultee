@@ -4,9 +4,9 @@ import jakarta.servlet.*;
 import jakarta.servlet.http.*;
 import jakarta.servlet.annotation.*;
 import org.gstfac.gestionfactulte.modele.DAO.DAOImplimentation.DepartementDAOImpl;
-import org.gstfac.gestionfactulte.modele.DAO.DAOImplimentation.FillierDaoImpl;
+import org.gstfac.gestionfactulte.modele.DAO.DAOImplimentation.FiliereDaoImpl;
 import org.gstfac.gestionfactulte.modele.DAO.Departement_DAO;
-import org.gstfac.gestionfactulte.modele.DAO.FillierDAO;
+import org.gstfac.gestionfactulte.modele.DAO.Filiere_DAO;
 import org.gstfac.gestionfactulte.modele.entity.Departement;
 import org.gstfac.gestionfactulte.modele.entity.Filiere;
 
@@ -15,12 +15,12 @@ import java.util.List;
 
 @WebServlet(name = "FiliereServlet", value = "/FiliereServlet")
 public class FiliereServlet extends HttpServlet {
-    private FillierDAO filiereDao;
+    private Filiere_DAO filiereDao;
     private Departement_DAO departementDao;
     @Override
     public void init() throws ServletException {
         super.init();
-        filiereDao = new FillierDaoImpl();
+        filiereDao = new FiliereDaoImpl();
         departementDao = new DepartementDAOImpl();
     }
     @Override

@@ -4,7 +4,7 @@
 <html>
 <head>
     <%@ include file="../Template/Head.jsp" %>
-    <title>Title</title>
+    <title>Departement</title>
 
     <!-- Bootstrap CSS link -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
@@ -16,7 +16,7 @@
     <%@ include file="../Template/Header.jsp" %>
 </header>
 <div class="container mt-3">
-    <h2>Add or Update Department</h2>
+    <h2>Ajouter ou faire une modification sur la liste des Departements</h2>
     <form action="DepartementServlet" method="post">
         <div class="form-group">
             <label for="nom">Department Name:</label>
@@ -36,7 +36,6 @@
     <table class="table">
         <thead>
         <tr>
-            <th>ID</th>
             <th>Nom</th>
             <th>Action</th>
         </tr>
@@ -46,17 +45,17 @@
             if (departments != null && !departments.isEmpty()) {
                 for (Departement department : departments) { %>
         <tr>
-            <td><%= department.getId() %></td>
             <td><%= department.getNom() %></td>
             <td>
-<%--            <a href="DepartementServlet?id=<%= department.getId() %>" class="btn btn-warning">Edit</a>--%>
-                <a href="DepartementServlet?action=delete&id=<%= department.getId() %>" class="btn btn-danger">Delete</a>
+                <a href="DepartementServlet?id=<%= department.getId() %>" class="btn btn-warning">Edit</a>
+                <a href="DepartementServlet?action=delete&id=<%= department.getId() %>"
+                   class="btn btn-danger">Delete</a>
             </td>
         </tr>
         <% }
         } else { %>
         <tr>
-            <td colspan="3"><h1>No data found</h1></td>
+            <td colspan="3"><h1>Aucune donnees</h1></td>
         </tr>
         <% } %>
         </tbody>

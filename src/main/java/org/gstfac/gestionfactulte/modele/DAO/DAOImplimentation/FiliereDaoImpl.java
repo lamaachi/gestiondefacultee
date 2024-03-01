@@ -2,16 +2,16 @@ package org.gstfac.gestionfactulte.modele.DAO.DAOImplimentation;
 
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.Query;
-import org.gstfac.gestionfactulte.modele.DAO.FillierDAO;
+import org.gstfac.gestionfactulte.modele.DAO.Filiere_DAO;
 import org.gstfac.gestionfactulte.modele.DAO.JDBCSingleton;
 import org.gstfac.gestionfactulte.modele.entity.Filiere;
 
 import java.util.List;
 
-public class FillierDaoImpl implements FillierDAO {
+public class FiliereDaoImpl implements Filiere_DAO {
     private final EntityManager entityManager;
 
-    public FillierDaoImpl() {
+    public FiliereDaoImpl() {
         entityManager = JDBCSingleton.getEntityManagerFactory().createEntityManager();
     }
 

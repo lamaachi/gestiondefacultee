@@ -4,7 +4,7 @@ import org.gstfac.gestionfactulte.modele.emuns.Fonctionnalite;
 import org.gstfac.gestionfactulte.modele.entity.Batiment;
 import org.gstfac.gestionfactulte.modele.entity.Salle;
 
-public class Fete_Adapter implements Batiment {
+public class Fete_Adapter extends Batiment {
     Salle salle;
 
     public Fete_Adapter(Salle salle) {
